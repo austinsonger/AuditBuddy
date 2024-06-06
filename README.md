@@ -16,7 +16,7 @@
 
 ## Evidence Collection
 
-### Integrations
+### Tools
 
 - [X] Amazon Web Services
 - [X] Atlassian
@@ -36,6 +36,7 @@
 - [ ] - Private Sector
 - [ ] - Federal
 
+### Evidence Mapping
 
 #### Federal
 

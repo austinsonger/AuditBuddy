@@ -18,11 +18,11 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_agent_configs():
     headers = {
-        "Authorization": f"APIToken {SENTINELONE_API_TOKEN}",
+        "Authorization": f"APIToken {PRIVSEC_SENTINELONE_API_TOKEN}",
         "Content-Type": "application/json"
     }
-    
-    response = requests.get(SENTINELONE_URL, headers=headers)
+
+    response = requests.get(PRIVSEC_SENTINELONE_URL, headers=headers)
     if response.status_code == 200:
         agents = response.json().get('data', [])
         return agents
