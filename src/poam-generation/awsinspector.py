@@ -9,7 +9,7 @@ from botocore.exceptions import ClientError
 
 def lambda_handler(event, context):
     client = boto3.client('inspector')
-
+    
     # Fetch AWS Inspector findings or reports
     findings = client.list_findings() # TO-DO: Additional processing or filters???
 

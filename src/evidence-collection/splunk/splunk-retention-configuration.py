@@ -5,13 +5,16 @@ from datetime import datetime
 import schedule
 import time
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Splunk API configuration
 CORP_SPLUNK_BASE_URL = os.getenv('CORP_SPLUNK_BASE_URL')  # 'CORP_SPLUNK_BASE_URL'
 CORP_SPLUNK_USERNAME = os.getenv('CORP_SPLUNK_USERNAME')  # 'CORP_SPLUNK_USERNAME'
 CORP_SPLUNK_PASSWORD = os.getenv('CORP_SPLUNK_PASSWORD')  # 'CORP_SPLUNK_PASSWORD'
 
 # Directory to save JSON files
-OUTPUT_DIR = "splunk_retention_configs"
+OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/splunk"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_retention_configs():
@@ -42,7 +45,7 @@ def fetch_retention_configs():
         return []
 
 def save_to_json(configs):
-    file_name = datetime.now().strftime('%Y-%m-%d') + "-splunk-retention-configs.json"
+    file_name = datetime.now().strftime('%Y-%m-%d') + "{current_date}-splunk-retention-configs.json"
     file_path = os.path.join(OUTPUT_DIR, file_name)
     with open(file_path, 'w') as file:
         json.dump(configs, file, indent=4)

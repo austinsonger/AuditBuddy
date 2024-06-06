@@ -3,16 +3,19 @@ import requests
 import json
 from datetime import datetime
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Set your Okta domain and API token
 OKTA_DOMAIN = os.getenv('OKTA_DOMAIN')
 API_TOKEN = os.getenv('API_TOKEN')
 
 # Create the output directory if it doesn't exist
-output_dir = f"lists/{datetime.now().year}/okta"
+output_dir = "/evidence-artifacts/private-sector/{current_year}/okta"
 os.makedirs(output_dir, exist_ok=True)
 
 # Set the output file path
-output_file = os.path.join(output_dir, f"{datetime.now().year}.okta-authentication-settings.json")
+output_file = os.path.join(output_dir, f"{current_date}.okta-authentication-settings.json")
 
 # Fetch the list of policies
 response = requests.get(f"https://{OKTA_DOMAIN}/api/v1/policies",
