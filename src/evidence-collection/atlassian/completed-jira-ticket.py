@@ -6,10 +6,10 @@ import schedule
 import time
 
 # Jira configuration
-JIRA_DOMAIN = "your_domain.atlassian.net"
-JIRA_EMAIL = "your_email@example.com"
-API_TOKEN = "your_api_token"
-PROJECT_KEY = "your_project_key"
+JIRA_DOMAIN = os.getenv('JIRA_DOMAIN')
+JIRA_EMAIL = os.getenv('JIRA_EMAIL')
+API_TOKEN = os.getenv('JIRA_API_TOKEN')
+PROJECT_KEY = os.getenv('JIRA_PROJECT_KEY')
 
 # Directory to save JSON files
 OUTPUT_DIR = "completed_tickets"
