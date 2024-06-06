@@ -3,14 +3,16 @@ import datetime
 import requests
 import json
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Set your Jira domain, email, and API token
 JIRA_DOMAIN = os.getenv('JIRA_DOMAIN')
 JIRA_EMAIL = os.getenv('JIRA_EMAIL')
 API_TOKEN = os.getenv('JIRA_API_TOKEN')
 
 # Create the output directory if it doesn't exist
-year = datetime.datetime.now().strftime('%Y')
-OUTPUT_DIR = f"lists/{year}/jira"
+OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/atlassian"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Set the output file path

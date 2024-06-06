@@ -30,7 +30,7 @@ def fetch_scan_results():
 def save_to_csv(scans):
     if not scans:
         return
-    file_name = datetime.now().strftime('%Y-%m-%d') + "{current_date}-tenable-scans.csv"
+    file_name = "{current_date}-tenable-scans.csv"
     file_path = os.path.join(OUTPUT_DIR, file_name)
     keys = scans[0].keys()  # Assumes all scans will have the same set of keys
     with open(file_path, mode='w', newline='') as file:

@@ -3,8 +3,11 @@ import json
 from datetime import datetime
 import os
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Constants
-API_KEY = 'your_api_key_here'  # Replace with your actual API key
+JUMPCLOUD_API_KEY = os.getenv('JUMPCLOUD_API_KEY')
 URL = "https://api.jumpcloud.com/v2/policies/passwordpolicy"
 
 def fetch_password_policy():
@@ -23,10 +26,9 @@ def fetch_password_policy():
 
 def write_policy_to_json(policy_data):
     """Write policy data to a JSON file with timestamp in the specified directory."""
-    current_year = datetime.now().year
     directory = f"/evidence-artifacts/{current_year}/private-sector/jumpcloud/"
     os.makedirs(directory, exist_ok=True)  # Ensure directory exists
-    file_name = f"{directory}Jumpcloud_Password_Policy_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    file_name = f"{directory}{current_date}Jumpcloud_Password_Polic.json"
     with open(file_name, 'w') as file:
         json.dump(policy_data, file, indent=4)
     print(f"Policy written to {file_name}")

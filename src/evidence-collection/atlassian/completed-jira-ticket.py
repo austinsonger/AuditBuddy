@@ -5,6 +5,9 @@ from datetime import datetime
 import schedule
 import time
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Jira configuration
 JIRA_DOMAIN = os.getenv('JIRA_DOMAIN')
 JIRA_EMAIL = os.getenv('JIRA_EMAIL')
@@ -12,7 +15,7 @@ API_TOKEN = os.getenv('JIRA_API_TOKEN')
 PROJECT_KEY = os.getenv('JIRA_PROJECT_KEY')
 
 # Directory to save JSON files
-OUTPUT_DIR = "completed_tickets"
+OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/atlassian"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_completed_tickets():
@@ -38,7 +41,7 @@ def fetch_completed_tickets():
         return []
 
 def save_to_json(issues):
-    file_name = datetime.now().strftime('%Y-%m-%d') + "-completed-tickets.json"
+    file_name = "{current_date}-completed-tickets.json"
     file_path = os.path.join(OUTPUT_DIR, file_name)
     with open(file_path, 'w') as file:
         json.dump(issues, file, indent=4)

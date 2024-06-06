@@ -5,14 +5,17 @@ from datetime import datetime
 import schedule
 import time
 
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
 # Cloudflare API configuration
-CORP_CLOUDFLARE_EMAIL = "your_email@example.com"
-CORP_CLOUDFLARE_API_KEY = "your_api_key"
-CORP_CLOUDFLARE_ZONE_ID = "your_zone_id"
+CORP_CLOUDFLARE_EMAIL = os.getenv('CORP_CLOUDFLARE_EMAIL')
+CORP_CLOUDFLARE_API_KEY = os.getenv('CORP_CLOUDFLARE_API_KEY')
+CORP_CLOUDFLARE_ZONE_ID = os.getenv('CORP_CLOUDFLARE_ZONE_ID')
 CORP_CLOUDFLARE_URL = f"https://api.cloudflare.com/client/v4/zones/{CLOUDFLARE_ZONE_ID}/firewall/rules"
 
 # Directory to save JSON files
-OUTPUT_DIR = "cloudflare_firewall_rules"
+OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/cloudflare"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_firewall_rules():
@@ -31,7 +34,7 @@ def fetch_firewall_rules():
         return []
 
 def save_to_json(rules):
-    file_name = datetime.now().strftime('%Y-%m-%d') + "-cloudflare-firewall-rules.json"
+    file_name = "{current_date}-cloudflare-firewall-rules.json"
     file_path = os.path.join(OUTPUT_DIR, file_name)
     with open(file_path, 'w') as file:
         json.dump(rules, file, indent=4)
