@@ -4,9 +4,9 @@ import requests
 import json
 
 # Set your Jira domain, email, and API token
-JIRA_DOMAIN = ""
-JIRA_EMAIL = ""
-API_TOKEN = ""
+JIRA_DOMAIN = os.getenv('JIRA_DOMAIN')
+JIRA_EMAIL = os.getenv('JIRA_EMAIL')
+API_TOKEN = os.getenv('JIRA_API_TOKEN')
 
 # Create the output directory if it doesn't exist
 year = datetime.datetime.now().strftime('%Y')
