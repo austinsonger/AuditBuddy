@@ -1,7 +1,7 @@
 # Evidence Collection and POAM Generation
 
-- Use Github Actions to create evidence and commits evidence to the repo.
-- Use Github Actions to Pull Vulnerability and Flaw Data from Sources to Generate a POAM for FedRAMP.
+- Create evidence from tools and other source and then commits evidence to the repo.
+- Pull Vulnerability and Flaw Data from vulnerability data sourceand then generates a POAM.
 
 ## POAM
 
