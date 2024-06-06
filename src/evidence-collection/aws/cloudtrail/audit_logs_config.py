@@ -9,11 +9,11 @@ start_date = current_date - datetime.timedelta(days=365)
 
 # Environments setup with AWS credentials and output file paths
 environments = {
-    'commercial': {
+    'private-sector': {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'commercial_output_file': f"/evidence-artifacts/{current_date.year}/commercial/"
+        'private_sector_output_file': f"/evidence-artifacts/{current_date.year}/private-sector/"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
@@ -48,8 +48,8 @@ for env_name, config in environments.items():
     output = run_command(' '.join(aws_command))
 
     # Determine the output file based on environment
-    if env_name == 'commercial':
-        output_file = config['commercial_output_file']
+    if env_name == 'private-sector':
+        output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
     

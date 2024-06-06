@@ -24,7 +24,7 @@ def fetch_password_policy():
 def write_policy_to_json(policy_data):
     """Write policy data to a JSON file with timestamp in the specified directory."""
     current_year = datetime.now().year
-    directory = f"/evidence-artifacts/{current_year}/commercial/jumpcloud/"
+    directory = f"/evidence-artifacts/{current_year}/private-sector/jumpcloud/"
     os.makedirs(directory, exist_ok=True)  # Ensure directory exists
     file_name = f"{directory}Jumpcloud_Password_Policy_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(file_name, 'w') as file:

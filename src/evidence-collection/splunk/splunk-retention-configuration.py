@@ -6,10 +6,9 @@ import schedule
 import time
 
 # Splunk API configuration
-CORP_SPLUNK_BASE_URL = "https://your_splunk_instance:8089"
-CORP_SPLUNK_USERNAME = "admin"
-CORP_SPLUNK_PASSWORD = "your_password"
-# If you use a token instead, configure the headers accordingly
+CORP_SPLUNK_BASE_URL = os.getenv('CORP_SPLUNK_BASE_URL')  # 'CORP_SPLUNK_BASE_URL'
+CORP_SPLUNK_USERNAME = os.getenv('CORP_SPLUNK_USERNAME')  # 'CORP_SPLUNK_USERNAME'
+CORP_SPLUNK_PASSWORD = os.getenv('CORP_SPLUNK_PASSWORD')  # 'CORP_SPLUNK_PASSWORD'
 
 # Directory to save JSON files
 OUTPUT_DIR = "splunk_retention_configs"
@@ -17,9 +16,9 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_retention_configs():
     # Endpoint to fetch index settings (including retention policies)
-    url = f"{SPLUNK_BASE_URL}/services/data/indexes"
+    url = f"{CORP_SPLUNK_BASE_URL}/services/data/indexes"
     headers = {
-        "Authorization": f"Basic {SPLUNK_USERNAME}:{SPLUNK_PASSWORD}",
+        "Authorization": f"Basic {CORP_SPLUNK_USERNAME}:{CORP_SPLUNK_PASSWORD}",
         "Content-Type": "application/json"
     }
     

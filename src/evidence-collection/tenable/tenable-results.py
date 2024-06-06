@@ -5,12 +5,14 @@ from tenable.io import TenableIO
 import schedule
 import time
 
-# Tenable API configuration
-CORP_TENABLE_ACCESS_KEY = "your_access_key"
-CORP_TENABLE_SECRET_KEY = "your_secret_key"
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
+
+CORP_TENABLE_ACCESS_KEY = os.getenv('CORP_TENABLE_ACCESS_KEY')  # 'CORP_TENABLE_ACCESS_KEY'
+CORP_TENABLE_SECRET_KEY = os.getenv('CORP_TENABLE_SECRET_KEY')  # 'CORP_TENABLE_SECRET_KEY
 
 # Directory to save CSV files
-OUTPUT_DIR = "tenable_scans"
+OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/Tenable"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Initialize Tenable.io API

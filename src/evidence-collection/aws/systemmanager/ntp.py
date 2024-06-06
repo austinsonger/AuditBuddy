@@ -8,11 +8,11 @@ current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Define the environments and their respective AWS credentials
 environments = {
-    'commercial': {
+    'private-sector': {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'output_file': f"/evidence-artifacts/{current_year}/commercial/aws/systemmanager/{current_date}.current-time.txt",
+        'output_file': f"/evidence-artifacts/{current_year}/private-sector/aws/systemmanager/{current_date}.current-time.txt",
         'command': [
             'aws', 'ssm', 'send-command',
             '--document-name', 'AWS-RunShellScript',
@@ -83,7 +83,7 @@ def log_current_time(environment, config):
     else:
         error_log_message(f"Failed to create file: {output_file}")
 
-# Log current system time for both commercial and federal environments
+# Log current system time for both private-sector and federal environments
 for env, config in environments.items():
     if not config['access_key'] or not config['secret_key']:
         error_log_message(f"Missing AWS credentials for {env} environment.")

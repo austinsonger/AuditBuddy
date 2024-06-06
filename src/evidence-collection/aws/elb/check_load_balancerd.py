@@ -6,7 +6,7 @@ import json
 # Define YEAR and DATE
 current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
-dir_path = f"evidence-artifacts/{current_year}/commercial/aws/elb/"
+dir_path = f"evidence-artifacts/{current_year}/private-sector/aws/elb/"
 
 # Ensure the directory exists
 os.makedirs(dir_path, exist_ok=True)

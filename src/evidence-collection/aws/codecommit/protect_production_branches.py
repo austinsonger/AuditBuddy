@@ -8,11 +8,11 @@ current_year = datetime.datetime.now().year
 
 # Environments dictionary
 environments = {
-    'commercial': {
+    'private-sector': {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'output_file': f"/evidence-artifacts/{current_year}/commercial/protected_branches.json"
+        'output_file': f"/evidence-artifacts/{current_year}/private-sector/protected_branches.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),

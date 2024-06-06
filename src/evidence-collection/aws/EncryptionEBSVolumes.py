@@ -7,15 +7,15 @@ current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Define the directories
-commercial_dir = f'/evidence-artifacts/commercial/aws/lists/EncryptedEBSVolumes/{current_year}/'
+private_sector_dir = f'/evidence-artifacts/private-sector/aws/lists/EncryptedEBSVolumes/{current_year}/'
 federal_dir = f'/evidence-artifacts/federal/aws/lists/EncryptedEBSVolumes/{current_year}/'
 
 # Create directories if they do not exist
-os.makedirs(commercial_dir, exist_ok=True)
+os.makedirs(private_sector_dir, exist_ok=True)
 os.makedirs(federal_dir, exist_ok=True)
 
 # Define the file paths
-commercial_volumes_file = f'{commercial_dir}{current_date}-encrypted_volumes.csv'
+private_sector_volumes_file = f'{private_sector_dir}{current_date}-encrypted_volumes.csv'
 federal_volumes_file = f'{federal_dir}{current_date}-encrypted_volumes.csv'
 
 # Function to run AWS CLI command and save output to CSV
@@ -32,7 +32,7 @@ def run_aws_command(command, output_file):
 commands = [
     (
         ['aws', 'ec2', 'describe-volumes', '--query', 'Volumes[?Encrypted==`true`]', '--output', 'json'],
-        commercial_volumes_file
+        private_sector_volumes_file
     ),
     (
         ['aws', 'ec2', 'describe-volumes', '--query', 'Volumes[?Encrypted==`true`]', '--output', 'json'],
@@ -44,4 +44,4 @@ commands = [
 for command, output_file in commands:
     run_aws_command(command, output_file)
 
-print(f"Completed. Files saved to {commercial_dir} and {federal_dir}.")
+print(f"Completed. Files saved to {private_sector_dir} and {federal_dir}.")

@@ -32,7 +32,7 @@ for bucket in buckets:
     print(f"Checking bucket: {bucket}")
     print("-----------------------------------")
 
-    dir_path = f"/evidence-artifacts/{current_year}/commercial/aws/S3/{bucket}"
+    dir_path = f"/evidence-artifacts/{current_year}/private-sector/aws/S3/{bucket}"
     os.makedirs(dir_path, exist_ok=True)
 
     # Get bucket policy
@@ -42,7 +42,7 @@ for bucket in buckets:
         '--query', 'Policy',
         '--output', 'json'
     ]
-    output_file = f"/evidence-artifacts/{current_year}/commercial/aws/S3/{bucket}/{current_date}.policy.json"
+    output_file = f"/evidence-artifacts/{current_year}/private-sector/aws/S3/{bucket}/{current_date}.policy.json"
     save_to_file(command, output_file)
 
     # Get bucket encryption
@@ -51,7 +51,7 @@ for bucket in buckets:
         '--bucket', bucket,
         '--output', 'json'
     ]
-    output_file = f"/evidence-artifacts/{current_year}/commercial/aws/S3/{bucket}/{current_date}.encryption.json"
+    output_file = f"/evidence-artifacts/{current_year}/private-sector/aws/S3/{bucket}/{current_date}.encryption.json"
     save_to_file(command, output_file)
 
     # Get bucket versioning
@@ -72,7 +72,7 @@ for bucket in buckets:
         '--query', 'BackupVaultList[*].BackupVaultName',
         '--output', 'json'
     ]
-    output_file = f"/evidence-artifacts/{current_year}/commercial/aws/S3/{bucket}/{current_date}.backup_vaults.json"
+    output_file = f"/evidence-artifacts/{current_year}/private-sector/aws/S3/{bucket}/{current_date}.backup_vaults.json"
     save_to_file(command, output_file)
 
     print(f"Output written to {dir_path}")

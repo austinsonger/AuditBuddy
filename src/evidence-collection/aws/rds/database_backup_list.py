@@ -8,11 +8,11 @@ current_year = datetime.datetime.now().year
 
 # Setup of environment dictionaries with AWS credentials and output paths
 environments = {
-    'commercial': {
+    'private-sector': {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'commercial_output_file': f"/evidence-artifacts/{current_year}/commercial/database_backups.json"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/database_backups.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
