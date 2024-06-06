@@ -1,0 +1,29 @@
+name: Tenable
+
+on:
+  schedule:
+    # Runs at 00:00 every Monday
+    - cron: "0 0 * * 1"
+
+jobs:
+  fetch_and_save_scans:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install pytenable
+
+      - name: Run Tenable Scan Script
+        env:
+          PRIVSEC_TENABLE_ACCESS_KEY: ${{ secrets.PRIVSEC_TENABLE_ACCESS_KEY }}
+          PRIVSEC_TENABLE_SECRET_KEY: ${{ secrets.PRIVSEC_TENABLE_SECRET_KEY }}
+        run: python src/tools/tenable/tenable-results.py

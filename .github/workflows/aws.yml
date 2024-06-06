@@ -1,0 +1,69 @@
+name: Amazon Web Services
+
+on:
+  schedule:
+    # Run at 00:00 on the first day of every month
+    - cron: "0 0 1 * *"
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # If you have a requirements.txt, uncomment the line below
+          # pip install -r requirements.txt
+
+      - name: Configure AWS credentials for commercial
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEVOPS_PRIVSEC_AUTOMATION_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEVOPS_PRIVSEC_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Configure AWS credentials for federal
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2 # default
+          verbose: false # default
+          arch: amd64 # allowed values: amd64, arm64
+          rootdir: "" # defaults to "PWD"
+          workdir: "" # defaults to "PWD/unfor19-awscli"
+
+      - name: Prepare Environment
+        id: prep
+        run: /bin/bash scripts/prep.sh
+        continue-on-error: false
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')
+
+      - uses: github-actions-x/commit@v2.9
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: "main"
+          force-add: "true"
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
