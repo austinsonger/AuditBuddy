@@ -7,14 +7,14 @@ current_year = datetime.datetime.now().year
 
 environments = {
     'private-sector': {
-        'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        'access_key': os.getenv('DEVOPS_PRIVSEC_AUTOMATION_AWS_ACCESS_KEY_ID'),
+        'secret_key': os.getenv('DEVOPS_PRIVSEC_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
         'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/inactive_user_accounts.json"
     },
     'federal': {
-        'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        'access_key': os.getenv('DEVOPS_FEDERAL_AUTOMATION_AWS_ACCESS_KEY_ID'),
+        'secret_key': os.getenv('DEVOPS_FEDERAL_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
         'federal_output_file': f"/evidence-artifacts/{current_year}/federal/inactive_user_accounts.json"
     }

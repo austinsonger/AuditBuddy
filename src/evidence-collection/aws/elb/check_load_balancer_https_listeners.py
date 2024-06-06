@@ -10,14 +10,14 @@ current_date = datetime.utcnow().strftime('%Y-%m-%d')
 # Define environments with AWS credentials and separate output files
 environments = {
     'private-sector': {
-        'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        'access_key': os.getenv('DEVOPS_PRIVSEC_AUTOMATION_AWS_ACCESS_KEY_ID'),
+        'secret_key': os.getenv('DEVOPS_PRIVSEC_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
         'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/aws/elb/{current_date}.load_balancers_https_listeners.json"
     },
     'federal': {
-        'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        'access_key': os.getenv('DEVOPS_FEDERAL_AUTOMATION_AWS_ACCESS_KEY_ID'),
+        'secret_key': os.getenv('DEVOPS_FEDERAL_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
         'federal_output_file': f"/evidence-artifacts/{current_year}/federal/aws/elb/{current_date}.load_balancers_https_listeners.json"
     }
