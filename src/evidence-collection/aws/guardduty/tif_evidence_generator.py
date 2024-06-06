@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Current year for file paths
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environment setup for AWS credentials and output file paths
 environments = {
@@ -57,4 +58,3 @@ for env_name, config in environments.items():
     # Write the JSON output to the specified file path
     with open(output_file, 'w') as file:
         json.dump(output, file)
-

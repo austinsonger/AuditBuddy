@@ -8,7 +8,7 @@ current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Set your Okta domain and API token
 OKTA_DOMAIN = os.getenv('OKTA_DOMAIN')
-API_TOKEN = os.getenv('API_TOKEN')
+OKTA_API_TOKEN = os.getenv('OKTA_API_TOKEN')
 
 # Create the output directory if it doesn't exist
 output_dir = "/evidence-artifacts/private-sector/{current_year}/okta"

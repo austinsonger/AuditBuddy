@@ -1,22 +1,23 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 environments = {
     'private-sector': {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/{current_date}.codereview.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/"
+        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/{current_date}.codereview.json"
     }
 }
 

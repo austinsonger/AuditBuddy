@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Set current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environments dictionary
 environments = {
@@ -33,7 +34,7 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # Initialize an empty list to store JSON output
     output = []
 
@@ -49,7 +50,7 @@ for env_name, config in environments.items():
 
     # Add command output to the list
     output.extend(command_output)
-    
+
     # Determine the output file based on environment
     output_file = config['output_file'] + 'cicd_tool_configuration.json'
 

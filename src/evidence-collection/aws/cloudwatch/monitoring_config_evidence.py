@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Set the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Set up the environments dictionary
 environments = {
@@ -12,13 +13,13 @@ environments = {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/{current_date}.monitoring-config.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/"
+        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/{current_date}.monitoring-config.json"
     }
 }
 
@@ -40,7 +41,7 @@ for env_name, config in environments.items():
         '--region', config['region'],
         '--output', 'json'
     ]
-    
+
     # Run the AWS CLI command
     output = json.loads(run_command(' '.join(aws_command)))
 

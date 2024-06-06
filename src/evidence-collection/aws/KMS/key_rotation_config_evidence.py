@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Define the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Setup environments dictionary with AWS credentials and output file paths
 environments = {

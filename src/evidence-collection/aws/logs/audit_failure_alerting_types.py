@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Get the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Set up environments
 environments = {
@@ -58,4 +59,3 @@ for env_name, config in environments.items():
     # Write the JSON output to the specified file path
     with open(output_file, 'w') as file:
         json.dump(output, file, indent=4)
-

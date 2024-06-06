@@ -1,9 +1,10 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 environments = {
     'private-sector': {
@@ -34,19 +35,19 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     output = []
     command_output = run_command(aws_command)
     for line in command_output:
         output.append(json.loads(line))
-    
+
     if env_name == 'private-sector':
         output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
-    
+
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    
+
     with open(os.path.join(output_file, 'evidence.json'), 'w') as f:
         json.dump(output, f, indent=4)
 

@@ -1,6 +1,6 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Define the current year and date
@@ -39,20 +39,20 @@ for env_name, config in environments.items():
     # Run AWS CLI command to list RDS snapshots and their encryption status
     command = "aws rds describe-db-snapshots --query 'DBSnapshots[*].{SnapshotIdentifier:DBSnapshotIdentifier,Encrypted:Encrypted}'"
     command_output = run_command(command)
-    
+
     for line in command_output:
         try:
             snapshot_info = json.loads(line)
             output.append(snapshot_info)
         except json.JSONDecodeError:
             continue
-    
+
     # Determine the output file based on environment
     if env_name == 'private-sector':
         output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
-    
+
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 

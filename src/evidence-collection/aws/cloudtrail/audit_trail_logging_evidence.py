@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Current year calculation
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environments setup
 environments = {
@@ -12,13 +13,13 @@ environments = {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/audit_trail_logging.json"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/{current_date}.audit_trail_logging.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/audit_trail_logging.json"
+        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/{current_date}.audit_trail_logging.json"
     }
 }
 
@@ -40,7 +41,7 @@ for env_name, config in environments.items():
         '--region', config['region'],
         '--output', 'json'
     ]
-    
+
     # Execute AWS CLI command
     output = run_command(' '.join(aws_command))
     output_json = json.dumps(output, indent=4)
@@ -50,10 +51,10 @@ for env_name, config in environments.items():
         output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
-    
+
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    
+
     # Write output to file
     with open(output_file, 'w') as file:
         file.write(output_json)

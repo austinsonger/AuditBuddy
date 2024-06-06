@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Current year for file path construction
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environment settings for AWS credentials and output paths
 environments = {
@@ -12,13 +13,13 @@ environments = {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/incident_response_logs.json"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/{current_date}.incident_response_logs.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/incident_response_logs.json"
+        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/{current_date}.incident_response_logs.json"
     }
 }
 
@@ -33,7 +34,7 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # AWS CLI command to fetch incident response logs
     aws_command = [
         'aws', 'cloudtrail', 'lookup-events',
@@ -54,4 +55,3 @@ for env_name, config in environments.items():
     # Write output to the specified file path
     with open(output_file, 'w') as file:
         json.dump(output, file)
-

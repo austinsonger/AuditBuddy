@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Set the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environment configurations
 environments = {
@@ -33,17 +34,17 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # Prepare output data
     output = []
-    
+
     # AWS CLI commands to execute
     commands = [
         ['aws', 'securityhub', 'list-configuration-policies', '--region', config['region'], '--output', 'json'],
         ['aws', 'securityhub', 'list-security-control-definitions', '--region', config['region'], '--output', 'json'],
         ['aws', 'securityhub', 'get-findings', '--region', config['region'], '--output', 'json']
     ]
-    
+
     # Execute commands and collect output
     for command in commands:
         output.append(run_command(' '.join(command)))

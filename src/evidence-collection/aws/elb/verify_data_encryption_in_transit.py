@@ -1,6 +1,6 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Current year calculation

@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Set the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environment configurations
 environments = {
@@ -33,15 +34,15 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # Prepare output data
     output = []
-    
+
     # AWS CLI command to describe EFS file systems
     command = [
         'aws', 'efs', 'describe-file-systems', '--region', config['region'], '--output', 'json'
     ]
-    
+
     # Execute command and collect output
     output.append(run_command(' '.join(command)))
 

@@ -11,7 +11,8 @@ def run_command(command):
     return result.stdout.splitlines()
 
 # Define the current year and date
-current_year = datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Set up environments dictionary
 environments = {
@@ -38,20 +39,19 @@ for env_name, config in environments.items():
     os.environ["AWS_ACCESS_KEY_ID"] = config['access_key']
     os.environ["AWS_SECRET_ACCESS_KEY"] = config['secret_key']
     os.environ["AWS_DEFAULT_REGION"] = config['region']
-    
+
     # Initialize empty list for JSON output
     output = run_command(aws_cli_command)
-    
+
     # Determine the output file path
     if env_name == 'private-sector':
         output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
-    
+
     # Ensure output directory exists
     os.makedirs(output_file, exist_ok=True)
-    
+
     # Write JSON output to file
     with open(os.path.join(output_file, 'encryption_config.json'), 'w') as f:
         json.dump(output, f, indent=4)
-

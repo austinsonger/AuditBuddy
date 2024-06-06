@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Get the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Define the environments dictionary
 environments = {
@@ -35,28 +36,28 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # Initialize an empty list to store JSON output
     output = []
-    
+
     # Define the AWS CLI command
     aws_command = [
         'aws', 'rds', 'describe-db-instances',
         '--filters', 'Name=db-instance-publicly-accessible,Values=false',
         '--output', 'json'
     ]
-    
+
     # Run the command and capture the output
     command_output = run_command(aws_command)
     for line in command_output:
         output.append(json.loads(line))
-    
+
     # Determine the output file path based on the environment
     output_file = config['output_file']
-    
+
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    
+
     # Write the JSON output to the specified file path
     with open(output_file, 'w') as f:
         json.dump(output, f, indent=4)

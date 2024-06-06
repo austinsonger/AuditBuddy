@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Define the current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Setup environments dictionary with AWS credentials and output file paths
 environments = {
@@ -49,7 +50,7 @@ for env_name, config in environments.items():
         output_file = config['private_sector_output_file']
     elif env_name == 'federal':
         output_file = config['federal_output_file']
-    
+
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 

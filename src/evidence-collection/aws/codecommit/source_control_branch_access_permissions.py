@@ -1,10 +1,11 @@
 import os
 import subprocess
-import datetime
+from datetime import datetime
 import json
 
 # Current year
-current_year = datetime.datetime.now().year
+current_year = datetime.utcnow().strftime('%Y')
+current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Environments dictionary
 environments = {
@@ -33,7 +34,7 @@ for env_name, config in environments.items():
     os.environ['AWS_ACCESS_KEY_ID'] = config['access_key']
     os.environ['AWS_SECRET_ACCESS_KEY'] = config['secret_key']
     os.environ['AWS_DEFAULT_REGION'] = config['region']
-    
+
     # AWS CLI command to list branch access permissions (modify as necessary)
     aws_command = [
         'aws', 'codecommit', 'get-branch',
@@ -41,19 +42,19 @@ for env_name, config in environments.items():
         '--branch-name', 'main',
         '--output', 'json'
     ]
-    
+
     # Run the AWS CLI command
     output = run_command(aws_command)
-    
+
     # Parse the JSON output
     json_output = [json.loads(line) for line in output]
-    
+
     # Determine the output file path
     output_file_path = config['output_file']
-    
+
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
-    
+
     # Write the JSON output to the specified file
     with open(output_file_path, 'w') as f:
         json.dump(json_output, f, indent=4)
