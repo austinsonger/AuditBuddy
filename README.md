@@ -7,8 +7,8 @@
 ## To-DO
 
 ###
-- [ ] - Commercial
-- [ ] - FedRAMP 
+- [ ] - Private Sector
+- [ ] - Federal 
 
 
 ### POAM
