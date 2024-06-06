@@ -9,10 +9,10 @@ current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Cloudflare API configuration
-CORP_CLOUDFLARE_EMAIL = os.getenv('CORP_CLOUDFLARE_EMAIL')
-CORP_CLOUDFLARE_API_KEY = os.getenv('CORP_CLOUDFLARE_API_KEY')
-CORP_CLOUDFLARE_ZONE_ID = os.getenv('CORP_CLOUDFLARE_ZONE_ID')
-CORP_CLOUDFLARE_URL = f"https://api.cloudflare.com/client/v4/zones/{CLOUDFLARE_ZONE_ID}/firewall/rules"
+PRIVSEC_CLOUDFLARE_EMAIL = os.getenv('PRIVSEC_CLOUDFLARE_EMAIL')
+PRIVSEC_CLOUDFLARE_API_KEY = os.getenv('PRIVSEC_CLOUDFLARE_API_KEY')
+PRIVSEC_CLOUDFLARE_ZONE_ID = os.getenv('PRIVSEC_CLOUDFLARE_ZONE_ID')
+PRIVSEC_CLOUDFLARE_URL = f"https://api.cloudflare.com/client/v4/zones/{CLOUDFLARE_ZONE_ID}/firewall/rules"
 
 # Directory to save JSON files
 OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/cloudflare"

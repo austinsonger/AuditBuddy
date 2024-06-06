@@ -8,15 +8,15 @@ import time
 current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
-CORP_TENABLE_ACCESS_KEY = os.getenv('CORP_TENABLE_ACCESS_KEY')  # 'CORP_TENABLE_ACCESS_KEY'
-CORP_TENABLE_SECRET_KEY = os.getenv('CORP_TENABLE_SECRET_KEY')  # 'CORP_TENABLE_SECRET_KEY
+PRIVSEC_TENABLE_ACCESS_KEY = os.getenv('PRIVSEC_TENABLE_ACCESS_KEY')  # 'PRIVSEC_TENABLE_ACCESS_KEY'
+PRIVSEC_TENABLE_SECRET_KEY = os.getenv('PRIVSEC_TENABLE_SECRET_KEY')  # 'PRIVSEC_TENABLE_SECRET_KEY
 
 # Directory to save CSV files
 OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/Tenable"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Initialize Tenable.io API
-tio = TenableIO(CORP_TENABLE_ACCESS_KEY, CORP_TENABLE_SECRET_KEY)
+tio = TenableIO(PRIVSEC_TENABLE_ACCESS_KEY, PRIVSEC_TENABLE_SECRET_KEY)
 
 def fetch_scan_results():
     try:

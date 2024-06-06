@@ -9,8 +9,8 @@ current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # SentinelOne API configuration
-CORP_SENTINELONE_API_TOKEN = os.getenv('CORP_SENTINELONE_API_TOKEN')
-CORP_SENTINELONE_URL = os.getenv('CORP_SENTINELONE_API_TOKEN')
+PRIVSEC_SENTINELONE_API_TOKEN = os.getenv('PRIVSEC_SENTINELONE_API_TOKEN')
+PRIVSEC_SENTINELONE_URL = os.getenv('PRIVSEC_SENTINELONE_API_TOKEN')
 
 # Directory to save JSON files
 OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/sentinelone"
