@@ -3,7 +3,7 @@
 - Use Github Actions to create evidence and commits evidence to the repo.
 - Use Github Actions to Pull Vulnerability and Flaw Data from Sources to Generate a POAM for FedRAMP.
 
-### POAM
+## POAM
 
 ### To-DO
 - [ ] - FedRAMPv5 Moderate Security Controls JSON
@@ -13,8 +13,6 @@
 - [ ] - Google Sheet Script
 - [ ] - Python Script to Move Closed items to Close Sheet
 
-
-## POAM
 
 ## Evidence Collection
 
@@ -36,7 +34,7 @@
 
 ### To Do
 - [ ] - Private Sector
-- [ ] - Federal 
+- [ ] - Federal
 
 
 #### Federal
@@ -53,5 +51,3 @@
 | --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
 |           |                        |                                                              |                                                       |                                                    |                            |              |
 |           |                        |                                                              |                                                       |                                                    |                            |              |
-
-
