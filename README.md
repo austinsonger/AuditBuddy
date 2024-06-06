@@ -24,12 +24,12 @@
 - [X] Jumpcloud
 - [X] Tenable
 - [X] SentinelOne
-- [ ] Elastic
 - [X] Splunk
 - [X] Cloudflare
-- [ ] Qualys
-- [ ] JAMF
-- [ ] Kandji
+
+#### Roadmap
+- [Roadmap for future tools](https://github.com/austinsonger/Evidence-and-POAM-Generation/issues?q=is%3Aopen+is%3Aissue+label%3AROADMAP)
+
 
 
 ### To Do
