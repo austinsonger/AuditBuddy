@@ -25,10 +25,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests jq
+      - name: Prepare Environment
+        id: prep
+        run: /bin/bash scripts/prep.sh
+        continue-on-error: false
 
       - name: Run check-authentication-settings
         run: python src/evidence-collection/okta/check_authentication_settings.py
