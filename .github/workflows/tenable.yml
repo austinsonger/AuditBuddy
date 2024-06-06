@@ -33,3 +33,4 @@ jobs:
           PRIVSEC_TENABLE_ACCESS_KEY: ${{ secrets.PRIVSEC_TENABLE_ACCESS_KEY }}
           PRIVSEC_TENABLE_SECRET_KEY: ${{ secrets.PRIVSEC_TENABLE_SECRET_KEY }}
         run: python src/tools/tenable/tenable-results.py
+
