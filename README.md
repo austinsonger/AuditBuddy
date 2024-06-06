@@ -1,7 +1,5 @@
 # AuditAlly
 
-> Evidence Collection and POAM Generation
-
 - Create evidence from tools and other source and then commits evidence to the repo.
 - Pull Vulnerability and Flaw Data from vulnerability data source and then generates a POAM.
 
