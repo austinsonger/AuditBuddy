@@ -32,9 +32,7 @@
 - [ ] Qualys
 - [ ] JAMF
 - [ ] Kandji
-- [ ] 
-- [ ]
-- [ ]
+
 
 ### To Do
 - [ ] - Private Sector
