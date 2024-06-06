@@ -1,9 +1,10 @@
 name: Amazon Web Services
 
 on:
-  schedule:
+#  schedule:
     # Run at 00:00 on the first day of every month
-    - cron: "0 0 1 * *"
+#    - cron: "0 0 1 * *"
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
   run-script:
