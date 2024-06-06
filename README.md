@@ -33,12 +33,10 @@
 - [Roadmap for future tools](https://github.com/austinsonger/Evidence-and-POAM-Generation/issues?q=is%3Aopen+is%3Aissue+label%3AROADMAP)
 
 
+### Evidence Mapping
 
-### To Do
 - [ ] - Private Sector
 - [ ] - Federal
-
-### Evidence Mapping
 
 #### Federal
 
