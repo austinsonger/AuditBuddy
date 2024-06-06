@@ -11,13 +11,13 @@ environments = {
         'access_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/{current_date}.tls_certificate_production_application.json"
+        'private_sector_output_file': f"/evidence-artifacts/{current_year}/private-sector/lists/{current_date}.tls_certificate_production_application.json"
     },
     'federal': {
         'access_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
         'secret_key': os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
         'region': 'us-east-1',
-        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/{current_date}.tls_certificate_production_application.json"
+        'federal_output_file': f"/evidence-artifacts/{current_year}/federal/lists/{current_date}.tls_certificate_production_application.json"
     }
 }
 
