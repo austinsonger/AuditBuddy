@@ -7,6 +7,8 @@ log_error() {
     echo "Error: $1" >&2
 }
 
+python -m pip install --upgrade pip
+
 # INSTALL JQ
 mkdir -p $HOME/bin
 curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -o $HOME/bin/jq
