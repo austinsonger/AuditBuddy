@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: 3.8
 
+      - name: Prepare Environment
+        id: prep
+        run: /bin/bash scripts/prep.sh
+        continue-on-error: false
+
       - name: Install dependencies
         run: |
           pip install pytenable
