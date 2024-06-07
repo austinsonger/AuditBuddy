@@ -1,0 +1,46 @@
+name: Setup Environment Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        description: "Python version to set up"
+        required: true
+        type: string
+      aws-cli-version:
+        description: "AWS CLI version to install"
+        required: false
+        default: "2"
+        type: string
+      aws-cli-arch:
+        description: "AWS CLI architecture"
+        required: false
+        default: "amd64"
+        type: string
+
+jobs:
+  setup-environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Prepare Environment
+        id: prep
+        run: /bin/bash .github/scripts/prep.sh
+        continue-on-error: false
+
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: ${{ inputs.aws-cli-version }}
+          verbose: false
+          arch: ${{ inputs.aws-cli-arch }}
+          rootdir: ""
+          workdir: ""

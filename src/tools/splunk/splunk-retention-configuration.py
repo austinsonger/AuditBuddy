@@ -9,9 +9,9 @@ current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # Splunk API configuration
-PRIVSEC_SPLUNK_BASE_URL = os.getenv('PRIVSEC_SPLUNK_BASE_URL')  # 'PRIVSEC_SPLUNK_BASE_URL'
-PRIVSEC_SPLUNK_USERNAME = os.getenv('PRIVSEC_SPLUNK_USERNAME')  # 'PRIVSEC_SPLUNK_USERNAME'
-PRIVSEC_SPLUNK_PASSWORD = os.getenv('PRIVSEC_SPLUNK_PASSWORD')  # 'PRIVSEC_SPLUNK_PASSWORD'
+CORP_SPLUNK_BASE_URL = os.getenv('CORP_SPLUNK_BASE_URL')  # 'CORP_SPLUNK_BASE_URL'
+CORP_SPLUNK_USERNAME = os.getenv('CORP_SPLUNK_USERNAME')  # 'CORP_SPLUNK_USERNAME'
+CORP_SPLUNK_PASSWORD = os.getenv('CORP_SPLUNK_PASSWORD')  # 'CORP_SPLUNK_PASSWORD'
 
 # Directory to save JSON files
 OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/splunk"
@@ -19,9 +19,9 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_retention_configs():
     # Endpoint to fetch index settings (including retention policies)
-    url = f"{PRIVSEC_SPLUNK_BASE_URL}/services/data/indexes"
+    url = f"{CORP_SPLUNK_BASE_URL}/services/data/indexes"
     headers = {
-        "Authorization": f"Basic {PRIVSEC_SPLUNK_USERNAME}:{PRIVSEC_SPLUNK_PASSWORD}",
+        "Authorization": f"Basic {CORP_SPLUNK_USERNAME}:{CORP_SPLUNK_PASSWORD}",
         "Content-Type": "application/json"
     }
     

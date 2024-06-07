@@ -9,8 +9,8 @@ current_year = datetime.utcnow().strftime('%Y')
 current_date = datetime.utcnow().strftime('%Y-%m-%d')
 
 # SentinelOne API configuration
-PRIVSEC_SENTINELONE_API_TOKEN = os.getenv('PRIVSEC_SENTINELONE_API_TOKEN')
-PRIVSEC_SENTINELONE_URL = os.getenv('PRIVSEC_SENTINELONE_API_TOKEN')
+CORP_SENTINELONE_API_TOKEN = os.getenv('CORP_SENTINELONE_API_TOKEN')
+CORP_SENTINELONE_URL = os.getenv('CORP_SENTINELONE_API_TOKEN')
 
 # Directory to save JSON files
 OUTPUT_DIR = "/evidence-artifacts/private-sector/{current_year}/sentinelone"
@@ -18,11 +18,11 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def fetch_agent_configs():
     headers = {
-        "Authorization": f"APIToken {PRIVSEC_SENTINELONE_API_TOKEN}",
+        "Authorization": f"APIToken {CORP_SENTINELONE_API_TOKEN}",
         "Content-Type": "application/json"
     }
 
-    response = requests.get(PRIVSEC_SENTINELONE_URL, headers=headers)
+    response = requests.get(CORP_SENTINELONE_URL, headers=headers)
     if response.status_code == 200:
         agents = response.json().get('data', [])
         return agents

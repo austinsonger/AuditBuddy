@@ -1,0 +1,106 @@
+name: NIST - Amazon Web Services Evidence
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  setup-aws-environment:
+    uses: ./.github/workflows/prep/setup-aws-environment.yml
+    with:
+      corp-aws-region: "us-east-1"
+      federal-aws-region: "us-east-1"
+      python-version: "3.x"
+      aws-cli-version: "2"
+      aws-cli-arch: "amd64"
+    secrets: inherit
+
+  run-script:
+    needs: setup-aws-environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: AC - Access Control
+        run: bash nist/AC.sh
+        shell: bash
+        continue-on-error: false
+      - name: AT - Awareness and Training
+        run: bash nist/AT.sh
+        shell: bash
+        continue-on-error: true
+      - name: AU - Audit and Accountability
+        run: bash nist/AA.sh
+        shell: bash
+        continue-on-error: true
+      - name: CA - Assessment, Authorization, and Monitoring
+        run: bash nist/AAM.sh
+        shell: bash
+        continue-on-error: true
+      - name: CM - Configuration Management
+        run: bash nist/CM.sh
+        shell: bash
+        continue-on-error: true
+      - name: CP - Contingency Planning
+        run: bash nist/CP.sh
+        shell: bash
+        continue-on-error: true
+      - name: IA - Identification and Authentication
+        run: bash nist/IAM.sh
+        shell: bash
+        continue-on-error: true
+      - name: IR - Incident Response
+        run: bash nist/IR.sh
+        shell: bash
+        continue-on-error: true
+      - name: MA - Maintenance
+        run: bash nist/MA.sh
+        shell: bash
+        continue-on-error: true
+      - name: MP - Media Protection
+        run: bash nist/MP.sh
+        shell: bash
+        continue-on-error: true
+      - name: PE - Physical and Environmental Protection
+        run: bash nist/PEP.sh
+        shell: bash
+        continue-on-error: true
+      - name: PL - Planning
+        run: bash nist/PL.sh
+        shell: bash
+        continue-on-error: true
+      - name: PM - Program Management
+        run: bash nist/PM.sh
+        shell: bash
+        continue-on-error: true
+      - name: PS - Personnel Security
+        run: bash nist/PS.sh
+        shell: bash
+        continue-on-error: true
+      - name: PT - Personally Identifiable Information Processing and Transparency
+        run: bash nist/PIIPT.sh
+        shell: bash
+        continue-on-error: true
+      - name: RA - Risk Assessment
+        run: bash nist/RA.sh
+        shell: bash
+        continue-on-error: true
+      - name: SA - System and Services Acquisition
+        run: bash nist/SSA.sh
+        shell: bash
+        continue-on-error: true
+      - name: SC - System and Communications Protection
+        run: bash nist/SCP.sh
+        shell: bash
+        continue-on-error: true
+      - name: SI System and Information Integrity
+        run: bash nist/SII.sh
+        shell: bash
+        continue-on-error: true
+      - name: SR - Supply Chain Risk Management
+        run: bash nist/SCRM.sh
+        continue-on-error: true
+
+  commit-changes:
+    needs: run-script
+    uses: ./.github/workflows/prep/reusable-git.yml
+    with:
+      commit-message: "Automated commit by GitHub Actions"
+    secrets: inherit
