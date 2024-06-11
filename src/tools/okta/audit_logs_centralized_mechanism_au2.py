@@ -4,28 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
 It retrieves audit logs from the centralized auditing mechanism for each of the defined auditable events in AU-2.a.1, considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read system logs.
-3. Run the script to generate a JSON file containing the audit logs.
-
-Functions:
-- get_audit_logs(): Fetches audit logs from Okta.
-- filter_recent_logs(logs, days): Filters logs that occurred within the past specified number of days.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_audit_logs.json' containing the audit logs with details of each auditable event.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
 """
 
 # Set environment variables for Okta domain and API token
