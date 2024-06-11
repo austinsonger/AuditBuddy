@@ -1,18 +1,7 @@
 """
-File Name: github_integrity_audit.py
-
-Description:
-This Python script generates evidence for a security audit by assessing the integrity verification mechanisms for software and firmware components in a GitHub organization. It utilizes the GitHub API to retrieve relevant information about commits, pull requests, and repository settings within the past 183 days.
-
-The script performs the following steps:
-1. Imports necessary libraries and sets constants.
-2. Retrieves information about commits and pull requests made to repositories within the organization.
-3. Analyzes commit messages and pull request descriptions to identify mentions of integrity verification mechanisms.
-4. Retrieves repository settings to check if any integrity verification features are enabled.
-5. Generates a report summarizing the findings and evidence collected.
-
-Ensure that the environment variables GITHUB_TOKEN and ORG_NAME are set with appropriate values, granting sufficient permissions to access the organization's repositories via the GitHub API.
-
+Generates evidence for a security audit by assessing the integrity verification mechanisms for software and 
+firmware components in a GitHub organization. It utilizes the GitHub API to retrieve relevant information about 
+commits, pull requests, and repository settings.
 """
 
 import os
