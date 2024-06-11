@@ -1,7 +1,15 @@
 # main.py
 import sys
 import os
+"""
+NIST 800-53 Control Numbers:
+- SI-3: Malicious Code Protection
+- SI-4: Information System Monitoring
 
+SOC 2 Control Numbers:
+- CC6.1: Security and Availability
+- CC7.1: System Monitoring
+"""
 # Adjust the Python path to include the parent directory of aws
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -38,18 +46,8 @@ def main():
 
         # Collect evidence
         aws_handler.collect_evidence(command_runner, aws_command_guardduty_detectors, output_file_guardduty_detectors)
-        aws_handler.collect_evidence(command_runner, aws_command_guardduty_threats, output_file_guardduty_threats)
+        aws_handler.collect_evidence(command_runner, aws_command_guardduty_threats, outpt_file_guardduty_threats)
         aws_handler.collect_evidence(command_runner, aws_command_securityhub_findings, output_file_securityhub_findings)
 
 if __name__ == "__main__":
     main()
-
-"""
-NIST 800-53 Control Numbers:
-- SI-3: Malicious Code Protection
-- SI-4: Information System Monitoring
-
-SOC 2 Control Numbers:
-- CC6.1: Security and Availability
-- CC7.1: System Monitoring
-"""
