@@ -4,29 +4,7 @@ import json
 from datetime import datetime
 
 """
-This script generates evidence for a security audit from Okta.
 It retrieves user listings along with their roles and permissions for in-scope networks.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read users, roles, and groups.
-3. Run the script to generate a JSON file containing the user listings with roles and permissions.
-
-Functions:
-- get_users(): Fetches the list of users from Okta.
-- get_user_roles(user_id): Fetches roles for a given user.
-- get_user_groups(user_id): Fetches groups for a given user.
-- generate_evidence(): Consolidates user data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_user_roles_permissions.json' containing the user listings with roles and permissions.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
 """
 
 # Set environment variables for Okta domain and API token
