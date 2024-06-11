@@ -1,18 +1,7 @@
 """
-File Name: github_dynamic_code_analysis_audit.py
-
-Description:
-This Python script generates evidence for a security audit by assessing the dynamic code analysis mechanisms applied to developed code, specifically focusing on OWASP ZAP (Zed Attack Proxy), in a GitHub organization. It utilizes the GitHub API to retrieve relevant information about repositories, workflow runs, and workflow job logs within the past 183 days.
-
-The script performs the following steps:
-1. Imports necessary libraries and sets constants.
-2. Retrieves information about repositories in the organization.
-3. Checks for workflow runs associated with OWASP ZAP dynamic code analysis.
-4. Retrieves logs for each workflow job run to analyze OWASP ZAP scan results.
-5. Generates a report summarizing the findings and evidence collected.
-
-Ensure that the environment variables GITHUB_TOKEN and ORG_NAME are set with appropriate values, granting sufficient permissions to access the organization's repositories via the GitHub API.
-
+Generates evidence for a security audit by assessing the dynamic code analysis mechanisms applied to developed code, 
+specifically focusing on OWASP ZAP (Zed Attack Proxy), in a GitHub organization. It utilizes the GitHub API to retrieve relevant 
+information about repositories, workflow runs, and workflow job logs.
 """
 
 import os
