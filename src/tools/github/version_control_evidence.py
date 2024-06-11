@@ -1,21 +1,9 @@
 # github_version_control_evidence.py
 
 """
-This script generates evidence for a security audit by fetching data from a GitHub repository to demonstrate
+Generates evidence for a security audit by fetching data from a GitHub repository to demonstrate
 that prior code is maintained for rollback capabilities and that version control is in use. The script uses
-the GitHub API to retrieve data on branches, tags, commits, and pull requests made in the last 183 days.
-
-Requirements:
-- GitHub Personal Access Token with permissions to access the repository
-- Python 3.x
-- `requests` library
-
-Usage:
-1. Set the `GITHUB_TOKEN` environment variable with your GitHub Personal Access Token.
-2. Set the `REPO_OWNER` and `REPO_NAME` variables to point to your repository.
-3. Run the script.
-
-The script outputs a JSON file containing details of branches, tags, commits, and pull requests made in the last 183 days.
+the GitHub API to retrieve data on branches, tags, commits, and pull requests made.
 """
 
 import os
