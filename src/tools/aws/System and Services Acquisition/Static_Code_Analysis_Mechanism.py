@@ -1,18 +1,6 @@
 """
-File Name: github_static_code_analysis_audit.py
-
-Description:
-This Python script generates evidence for a security audit by assessing the static code analysis mechanisms applied to developed code in a GitHub organization. It utilizes the GitHub API to retrieve relevant information about repositories, code scanning alerts, and repository settings within the past 183 days.
-
-The script performs the following steps:
-1. Imports necessary libraries and sets constants.
-2. Retrieves information about repositories in the organization.
-3. Checks for code scanning alerts in each repository.
-4. Analyzes repository settings to determine if static code analysis mechanisms are enabled.
-5. Generates a report summarizing the findings and evidence collected.
-
-Ensure that the environment variables GITHUB_TOKEN and ORG_NAME are set with appropriate values, granting sufficient permissions to access the organization's repositories via the GitHub API.
-
+Generates evidence for a security audit by assessing the static code analysis mechanisms applied to developed code in a GitHub organization. 
+It utilizes the GitHub API to retrieve relevant information about repositories, code scanning alerts, and repository settings.
 """
 
 import os
