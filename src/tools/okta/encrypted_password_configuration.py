@@ -4,29 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
-It retrieves configuration settings to ensure that only encrypted representations of passwords are stored and transmitted, considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read password policies and security settings.
-3. Run the script to generate a JSON file containing the configuration settings.
-
-Functions:
-- get_password_policies(): Fetches password policies from Okta.
-- get_security_settings(): Fetches security settings related to password encryption from Okta.
-- filter_recent_policies(policies, days): Filters policies created within the past specified number of days.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_encrypted_password_configuration.json' containing the configuration settings for storing and transmitting encrypted passwords.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
+It retrieves configuration settings to ensure that only encrypted representations of passwords are stored and transmitted.
 """
 
 # Set environment variables for Okta domain and API token
