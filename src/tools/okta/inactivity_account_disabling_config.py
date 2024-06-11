@@ -4,28 +4,8 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
-It retrieves the configuration settings to disable identifiers after a defined period of account inactivity, considering data from the past 365 days where applicable.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read policies and settings.
-3. Run the script to generate a JSON file containing the inactivity account disabling configuration.
-
-Functions:
-- get_inactivity_policies(): Fetches policies related to account inactivity from Okta.
-- filter_recent_policies(policies, days): Filters policies created within the past specified number of days.
-- generate_evidence(): Consolidates policy data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_inactivity_account_disabling_config.json' containing the configuration settings for disabling accounts after a defined period of inactivity.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
+It retrieves the configuration settings to disable identifiers after a defined period of 
+account inactivity, considering data from the past 365 days where applicable.
 """
 
 # Set environment variables for Okta domain and API token
