@@ -1,21 +1,7 @@
 # github_change_control_records.py
 
 """
-This script generates evidence for a security audit by fetching change control records from a GitHub repository
-for a sample of application code changes made in the last 183 days. The script uses the GitHub API to retrieve
-data on pull requests and commits, which are considered as change control records.
-
-Requirements:
-- GitHub Personal Access Token with permissions to access the repository
-- Python 3.x
-- `requests` library
-
-Usage:
-1. Set the `GITHUB_TOKEN` environment variable with your GitHub Personal Access Token.
-2. Set the `REPO_OWNER` and `REPO_NAME` variables to point to your repository.
-3. Run the script.
-
-The script outputs a JSON file containing details of pull requests and commits made in the last 183 days.
+Fetches change control records from a GitHub repository for a sample of application code changes made. 
 """
 
 import os
