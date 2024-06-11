@@ -1,7 +1,15 @@
 # main.py
 import sys
 import os
+"""
+NIST 800-53 Control Numbers:
+- CA-7: Continuous Monitoring
+- SI-4: Information System Monitoring
 
+SOC 2 Control Numbers:
+- CC6.1: Security and Availability
+- CC7.2: Change Management
+"""
 # Adjust the Python path to include the parent directory of aws
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
