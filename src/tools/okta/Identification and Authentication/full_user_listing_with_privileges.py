@@ -4,31 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
-It retrieves a full system-generated user listing noting whether users are privileged or non-privileged, their access authorizations, roles, and groups, considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read user profiles, roles, and groups.
-3. Run the script to generate a JSON file containing the user listings with privileges.
-
-Functions:
-- get_users(): Fetches the list of users from Okta.
-- get_user_roles(user_id): Fetches roles for a given user.
-- get_user_groups(user_id): Fetches groups for a given user.
-- is_privileged_account(user_roles): Checks if the user has any privileged roles.
-- filter_recent_users(users, days): Filters users created within the past specified number of days.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_user_listing_with_privileges.json' containing the full user listing with privileges, roles, and groups.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
+It retrieves a full system-generated user listing noting whether users are privileged or non-privileged, their access authorizations, roles, and groups.
 """
 
 # Set environment variables for Okta domain and API token
