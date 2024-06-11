@@ -4,29 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
 It retrieves access control settings for log files, considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read policies and log settings.
-3. Run the script to generate a JSON file containing the access control settings for log files.
-
-Functions:
-- get_system_log(): Fetches system log entries from Okta.
-- filter_recent_logs(logs, days): Filters log entries that occurred within the past specified number of days.
-- extract_access_control_info(logs): Extracts access control information from log entries.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_access_control_log_files.json' containing the access control settings for log files.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
 """
 
 # Set environment variables for Okta domain and API token
