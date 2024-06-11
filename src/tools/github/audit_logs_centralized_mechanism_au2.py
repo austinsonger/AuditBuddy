@@ -1,7 +1,6 @@
 # github_audit_logs_evidence.py
 
 """
-This script generates evidence for a security audit by fetching audit logs from a GitHub repository.
 The script aims to capture details of each auditable event as defined in AU-2.a.1, including:
 - Type of event
 - When the event occurred
@@ -9,18 +8,6 @@ The script aims to capture details of each auditable event as defined in AU-2.a.
 - Source of the event
 - Outcome of the event
 - Identity of individuals or subjects associated with the event
-
-Requirements:
-- GitHub Personal Access Token with permissions to access the repository and audit logs
-- Python 3.x
-- `requests` library
-
-Usage:
-1. Set the `GITHUB_TOKEN` environment variable with your GitHub Personal Access Token.
-2. Set the `ORG_NAME` variable to your GitHub organization name.
-3. Run the script.
-
-The script outputs a JSON file containing the audit logs for the past 183 days.
 """
 
 import os
