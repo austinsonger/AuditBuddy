@@ -1,7 +1,15 @@
 # main.py
 import sys
 import os
+"""
+NIST 800-53 Control Numbers:
+- MP-7: Media Use
+- MP-8: Media Downgrading
 
+SOC 2 Control Numbers:
+- CC6.1: Security and Availability
+- CC6.8: Confidentiality and Processing Integrity
+"""
 # Adjust the Python path to include the parent directory of aws
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -43,13 +51,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-"""
-NIST 800-53 Control Numbers:
-- MP-7: Media Use
-- MP-8: Media Downgrading
-
-SOC 2 Control Numbers:
-- CC6.1: Security and Availability
-- CC6.8: Confidentiality and Processing Integrity
-"""
