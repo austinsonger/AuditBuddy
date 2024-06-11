@@ -4,29 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
 It retrieves PKI-based authentication configuration settings if used, considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read authentication policies and settings.
-3. Run the script to generate a JSON file containing the PKI-based authentication configuration settings.
-
-Functions:
-- get_authentication_policies(): Fetches authentication policies from Okta.
-- filter_recent_policies(policies, days): Filters policies created within the past specified number of days.
-- extract_pki_configuration(policies): Extracts PKI-based authentication configuration settings.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_pki_authentication_settings.json' containing the PKI-based authentication configuration settings.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
 """
 
 # Set environment variables for Okta domain and API token
