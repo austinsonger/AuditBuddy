@@ -4,31 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 """
-This script generates evidence for a security audit from Okta.
-It retrieves authentication methods used to access privileged accounts for in-scope networks, only considering data from the past 365 days.
-
-Steps:
-1. Set the environment variables `OKTA_DOMAIN` and `OKTA_API_TOKEN`.
-2. Ensure the Okta API token has the necessary permissions to read user authentication events and policies.
-3. Run the script to generate a JSON file containing the authentication methods for privileged accounts.
-
-Functions:
-- get_users(): Fetches the list of users from Okta.
-- get_user_roles(user_id): Fetches roles for a given user.
-- is_privileged_account(user_roles): Checks if the user has any privileged roles.
-- get_authentication_methods(user_id): Fetches authentication methods used by a given user.
-- filter_recent_events(events, days): Filters events that occurred within the past specified number of days.
-- generate_evidence(): Consolidates data and writes it to a JSON file.
-
-Output:
-- A JSON file named 'okta_privileged_account_authentication_methods.json' containing the authentication methods used for privileged accounts.
-
-Requirements:
-- Python 3.x
-- requests library (install via `pip install requests`)
-
-Author:
-- Austin Songer
+It retrieves authentication methods used to access privileged accounts for in-scope networks.
 """
 
 # Set environment variables for Okta domain and API token
