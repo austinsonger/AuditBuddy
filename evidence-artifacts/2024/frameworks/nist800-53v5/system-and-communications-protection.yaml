@@ -1,0 +1,114 @@
+SC-1:
+  ControlName: System and Communications Protection Policy and Procedures
+  EvidenceItems: []
+SC-2:
+  ControlName: Application Partitioning
+  EvidenceItems: []
+SC-3:
+  ControlName: Security Function Isolation
+  EvidenceItems: []
+SC-4:
+  ControlName: Information in Shared Resources
+  EvidenceItems: []
+SC-5:
+  ControlName: Denial-of-Service Protection
+  EvidenceItems: []
+SC-7:
+  ControlName: Boundary Protection
+  EvidenceItems: []
+SC-8:
+  ControlName: Transmission Confidentiality and Integrity
+  EvidenceItems: []
+SC-10:
+  ControlName: Network Disconnect
+  EvidenceItems: []
+SC-12:
+  ControlName: Cryptographic Key Establishment and Management
+  EvidenceItems: []
+SC-13:
+  ControlName: Cryptographic Protection
+  EvidenceItems: []
+SC-15:
+  ControlName: Collaborative Computing Devices
+  EvidenceItems: []
+SC-16:
+  ControlName: Transmission of Security and Privacy Attributes
+  EvidenceItems: []
+SC-17:
+  ControlName: Public Key Infrastructure Certificates
+  EvidenceItems: []
+SC-18:
+  ControlName: Mobile Code
+  EvidenceItems: []
+SC-19:
+  ControlName: Voice Over Internet Protocol
+  EvidenceItems: []
+SC-20:
+  ControlName: Secure Name / Address Resolution Service (Authoritative Source)
+  EvidenceItems: []
+SC-21:
+  ControlName: Secure Name / Address Resolution Service (Recursive or Caching Resolver)
+  EvidenceItems: []
+SC-22:
+  ControlName: Architecture and Provisioning for Name / Address Resolution Service
+  EvidenceItems: []
+SC-23:
+  ControlName: Session Authenticity
+  EvidenceItems: []
+SC-24:
+  ControlName: Fail in Known State
+  EvidenceItems: []
+SC-25:
+  ControlName: Thin Nodes
+  EvidenceItems: []
+SC-26:
+  ControlName: Honeypots
+  EvidenceItems: []
+SC-27:
+  ControlName: Platform-Independent Applications
+  EvidenceItems: []
+SC-28:
+  ControlName: Protection of Information at Rest
+  EvidenceItems: []
+SC-29:
+  ControlName: Heterogeneity
+  EvidenceItems: []
+SC-30:
+  ControlName: Concealment and Misdirection
+  EvidenceItems: []
+SC-31:
+  ControlName: Covert Channel Analysis
+  EvidenceItems: []
+SC-32:
+  ControlName: Information System Partitioning
+  EvidenceItems: []
+SC-33:
+  ControlName: Transmission Preparation Integrity
+  EvidenceItems: []
+SC-34:
+  ControlName: 'Non-Mandatory: Cryptographic Key Generation'
+  EvidenceItems: []
+SC-35:
+  ControlName: 'Non-Mandatory: Hardware-Enforced Cryptography'
+  EvidenceItems: []
+SC-36:
+  ControlName: Distributed Processing and Storage
+  EvidenceItems: []
+SC-37:
+  ControlName: Out-of-Band Channels
+  EvidenceItems: []
+SC-38:
+  ControlName: Operations Security
+  EvidenceItems: []
+SC-39:
+  ControlName: Process Isolation
+  EvidenceItems: []
+SC-40:
+  ControlName: Wireless Link Protection
+  EvidenceItems: []
+SC-41:
+  ControlName: Port and I/O Device Access
+  EvidenceItems: []
+SC-42:
+  ControlName: Sensor Capability and Data
+  EvidenceItems: []
