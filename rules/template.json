@@ -10,8 +10,7 @@
           "pci-dss-4.0.0": "<Placeholder>",
           "iso-27001-2022": "<Placeholder>",
           "soc-2": "<Placeholder>",
-          "hipaa-security": "<Placeholder>",
-          "explanation": "<Placeholder>"
+          "hipaa-security": "<Placeholder>"
         }
       ]
     },
@@ -24,7 +23,7 @@
           "pci-dss-4.0.0": "<Placeholder>",
           "iso-27001-2022": "<Placeholder>",
           "soc-2": "<Placeholder>",
-          "hipaa-security": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
         }
       ]
     },
@@ -37,8 +36,7 @@
           "pci-dss-4.0.0": "<Placeholder>",
           "iso-27001-2022": "<Placeholder>",
           "soc-2": "<Placeholder>",
-          "hipaa-security": "<Placeholder>",
-          "explanation": "<Placeholder>"
+          "hipaa-security": "<Placeholder>"
         }
       ]
     }
