@@ -1,0 +1,21 @@
+MA-1:
+  ControlName: System Maintenance Policy and Procedures
+  EvidenceItems: []
+MA-2:
+  ControlName: Controlled Maintenance
+  EvidenceItems: []
+MA-3:
+  ControlName: Maintenance Tools
+  EvidenceItems: []
+MA-4:
+  ControlName: Nonlocal Maintenance
+  EvidenceItems: []
+MA-5:
+  ControlName: Maintenance Personnel
+  EvidenceItems: []
+MA-6:
+  ControlName: Timely Maintenance
+  EvidenceItems: []
+MA-7:
+  ControlName: Field Maintenance
+  EvidenceItems: []
