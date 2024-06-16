@@ -1,0 +1,59 @@
+{
+  "aws-service": "<Placeholder>",
+  "domain": [
+    {
+      "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
+      "explanation": "<Placeholder>",
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    },
+    {
+      "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
+      "explanation": "<Placeholder>",
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    },
+    {
+      "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
+      "explanation": "<Placeholder>",
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    }
+  ]
+}
