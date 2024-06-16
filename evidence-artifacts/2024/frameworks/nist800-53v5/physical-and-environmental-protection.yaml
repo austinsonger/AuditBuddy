@@ -1,0 +1,66 @@
+PE-1:
+  ControlName: Physical and Environmental Protection Policy and Procedures
+  EvidenceItems: []
+PE-3:
+  ControlName: Physical Access Control
+  EvidenceItems: []
+PE-4:
+  ControlName: Access Control for Transmission Medium
+  EvidenceItems: []
+PE-5:
+  ControlName: Access Control for Output Devices
+  EvidenceItems: []
+PE-6:
+  ControlName: Monitoring Physical Access
+  EvidenceItems: []
+PE-7:
+  ControlName: Visitor Controls
+  EvidenceItems: []
+PE-8:
+  ControlName: Visitor Access Records
+  EvidenceItems: []
+PE-9:
+  ControlName: Power Equipment and Cabling
+  EvidenceItems: []
+PE-10:
+  ControlName: Emergency Shutoff
+  EvidenceItems: []
+PE-11:
+  ControlName: Emergency Power
+  EvidenceItems: []
+PE-12:
+  ControlName: Emergency Lighting
+  EvidenceItems: []
+PE-13:
+  ControlName: Fire Protection
+  EvidenceItems: []
+PE-14:
+  ControlName: Temperature and Humidity Controls
+  EvidenceItems: []
+PE-15:
+  ControlName: Water Damage Protection
+  EvidenceItems: []
+PE-16:
+  ControlName: Delivery and Removal
+  EvidenceItems: []
+PE-17:
+  ControlName: Alternate Work Site
+  EvidenceItems: []
+PE-18:
+  ControlName: Location of Information System Components
+  EvidenceItems: []
+PE-19:
+  ControlName: Information Leakage
+  EvidenceItems: []
+PE-2:
+  ControlName: Physical Access Authorizations
+  EvidenceItems: []
+PE-20:
+  ControlName: Asset Monitoring and Tracking
+  EvidenceItems: []
+PE-21:
+  ControlName: Electromagnetic Radiation
+  EvidenceItems: []
+PE-22:
+  ControlName: Facility Penetration Testing
+  EvidenceItems: []
