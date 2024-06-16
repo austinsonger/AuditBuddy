@@ -1,0 +1,27 @@
+MP-1:
+  ControlName: Media Protection Policy and Procedures
+  EvidenceItems: []
+MP-2:
+  ControlName: Media Access
+  EvidenceItems: []
+MP-3:
+  ControlName: Media Marking
+  EvidenceItems: []
+MP-4:
+  ControlName: Media Storage
+  EvidenceItems: []
+MP-5:
+  ControlName: Media Transport
+  EvidenceItems: []
+MP-6:
+  ControlName: Media Sanitization
+  EvidenceItems: []
+MP-7:
+  ControlName: Media Use
+  EvidenceItems: []
+MP-8:
+  ControlName: Media Downgrading
+  EvidenceItems: []
+MP-9:
+  ControlName: Media Disposal
+  EvidenceItems: []
