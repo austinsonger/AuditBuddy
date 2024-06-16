@@ -1,5 +1,5 @@
 {
-  "<Placeholder>": "<Placeholder>",
+  "aws-service": "AutoScaling",
   "domain": [
     {
       "rule": "<Placeholder>",
@@ -8,7 +8,7 @@
       "parameters": {
         "<Placeholder>": "<Placeholder>"
       },      
-      "explanation": "<Placeholder>"
+      "explanation": "<Placeholder>",
       "controls": [
         {
           "nist800-53v5": "<Placeholder>",
@@ -26,7 +26,7 @@
       "parameters": {
         "<Placeholder>": "<Placeholder>"
       },      
-      "explanation": "<Placeholder>"
+      "explanation": "<Placeholder>",
       "controls": [
         {
           "nist800-53v5": "<Placeholder>",
@@ -44,7 +44,7 @@
       "parameters": {
         "<Placeholder>": "<Placeholder>"
       },      
-      "explanation": "<Placeholder>"
+      "explanation": "<Placeholder>",
       "controls": [
         {
           "nist800-53v5": "<Placeholder>",
