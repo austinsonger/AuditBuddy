@@ -1,0 +1,24 @@
+{
+  "aws-service": "Okta Resource",
+  "domain": [
+    {
+      "rule": "OktaListUsers",
+      "command": "okta get /api/v1/users",
+      "sub-command": "?limit=<limit>&filter=<filter>",
+      "parameters": {
+        "limit": "<limit>",
+        "filter": "<filter>"
+      },
+      "explanation": "List users in Okta with optional filters.",
+      "controls": [
+        {
+          "nist800-53v5": "AC-2, AC-3",
+          "pci-dss-4.0.0": "8.1, 8.2",
+          "iso-27001-2022": "A.9.2.1, A.9.2.2",
+          "soc-2": "CC6.1, CC6.2",
+          "hipaa-security": "164.308(a)(4)(ii)(C), 164.312(a)(2)(i)"
+        }
+      ]
+    }
+  ]
+}
