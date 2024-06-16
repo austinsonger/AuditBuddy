@@ -1,0 +1,33 @@
+CP-1:
+  ControlName: Contingency Planning Policy and Procedures
+  EvidenceItems: []
+CP-2:
+  ControlName: Contingency Plan
+  EvidenceItems: []
+CP-3:
+  ControlName: Contingency Training
+  EvidenceItems: []
+CP-4:
+  ControlName: Contingency Plan Testing
+  EvidenceItems: []
+CP-6:
+  ControlName: Alternate Storage Site
+  EvidenceItems: []
+CP-7:
+  ControlName: Alternate Processing Site
+  EvidenceItems: []
+CP-8:
+  ControlName: Telecommunications Services
+  EvidenceItems: []
+CP-9:
+  ControlName: System Backup
+  EvidenceItems: []
+CP-10:
+  ControlName: Information System Recovery and Reconstitution
+  EvidenceItems: []
+CP-11:
+  ControlName: Alternate Communications Protocols
+  EvidenceItems: []
+CP-12:
+  ControlName: Safe Mode
+  EvidenceItems: []
