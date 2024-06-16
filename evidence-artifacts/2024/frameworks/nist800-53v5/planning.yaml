@@ -1,0 +1,27 @@
+PL-1:
+  ControlName: Planning Policy and Procedures
+  EvidenceItems: []
+PL-2:
+  ControlName: System Security and Privacy Plans
+  EvidenceItems: []
+PL-4:
+  ControlName: Rules of Behavior
+  EvidenceItems: []
+PL-7:
+  ControlName: Concept of Operations
+  EvidenceItems: []
+PL-8:
+  ControlName: Security and Privacy Architectures
+  EvidenceItems: []
+PL-9:
+  ControlName: Central Management
+  EvidenceItems: []
+PL-10:
+  ControlName: Baseline Selection
+  EvidenceItems: []
+PL-11:
+  ControlName: Strategic Planning
+  EvidenceItems: []
+PL-12:
+  ControlName: Inventory
+  EvidenceItems: []
