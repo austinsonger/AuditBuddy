@@ -1,0 +1,51 @@
+SA-1:
+  ControlName: System and Services Acquisition Policy and Procedures
+  EvidenceItems: []
+SA-2:
+  ControlName: Allocation of Resources
+  EvidenceItems: []
+SA-3:
+  ControlName: System Development Life Cycle
+  EvidenceItems: []
+SA-4:
+  ControlName: Acquisitions
+  EvidenceItems: []
+SA-5:
+  ControlName: System Documentation
+  EvidenceItems: []
+SA-8:
+  ControlName: Security and Privacy Engineering Principles
+  EvidenceItems: []
+SA-9:
+  ControlName: External System Services
+  EvidenceItems: []
+SA-10:
+  ControlName: Developer Configuration Management
+  EvidenceItems: []
+SA-11:
+  ControlName: Developer Testing and Evaluation
+  EvidenceItems: []
+SA-15:
+  ControlName: Development Process, Standards, and Tools
+  EvidenceItems: []
+SA-16:
+  ControlName: Developer-Provided Training
+  EvidenceItems: []
+SA-17:
+  ControlName: Developer Security and Privacy Architecture and Design
+  EvidenceItems: []
+SA-18:
+  ControlName: Tamper Resistance and Detection
+  EvidenceItems: []
+SA-19:
+  ControlName: Component Authenticity
+  EvidenceItems: []
+SA-20:
+  ControlName: Customized Development of Critical Components
+  EvidenceItems: []
+SA-21:
+  ControlName: Developer Screening
+  EvidenceItems: []
+SA-22:
+  ControlName: Unsupported System Components
+  EvidenceItems: []
