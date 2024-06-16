@@ -1,0 +1,72 @@
+AC-1:
+  ControlName: Access Control Policy and Procedures
+  EvidenceItems: []
+AC-3:
+  ControlName: Account Management
+  EvidenceItems: []
+AC-3:
+  ControlName: Access Enforcement
+  EvidenceItems: []
+AC-4:
+  ControlName: Information Flow Enforcement
+  EvidenceItems: []
+AC-5:
+  ControlName: Separation of Duties
+  EvidenceItems: []
+AC-6:
+  ControlName: Least Privilege
+  EvidenceItems: []
+AC-7:
+  ControlName: Unsuccessful Login Attempts
+  EvidenceItems: []
+AC-8:
+  ControlName: System Use Notification
+  EvidenceItems: []
+AC-9:
+  ControlName: Previous Logon (Access) Notification
+  EvidenceItems: []  
+AC-10:
+  ControlName: Concurrent Session Control
+  EvidenceItems: []
+AC-11:
+  ControlName: Session Lock
+  EvidenceItems: []
+AC-12:
+  ControlName: Session Termination
+  EvidenceItems: []
+AC-13:
+  ControlName: Supervision and Review - Access Control
+  EvidenceItems: []
+AC-14:
+  ControlName: Permitted Actions without Identification or Authentication
+  EvidenceItems: []
+AC-15:
+  ControlName: Automated Marking
+  EvidenceItems: []
+AC-16:
+  ControlName: Automated Labeling
+  EvidenceItems: []
+AC-17:
+  ControlName: Remote Access
+  EvidenceItems: []
+AC-18:
+  ControlName: Wireless Access
+  EvidenceItems: []
+AC-19:
+  ControlName: Access Control for Mobile Devices
+  EvidenceItems: []
+AC-2:
+  ControlName: Account Management
+  EvidenceItems: []
+AC-20:
+  ControlName: Use of External Information Systems
+  EvidenceItems: []
+AC-21:
+  ControlName: Information Sharing
+  EvidenceItems: []
+AC-22:
+  ControlName: Publicly Accessible Content
+  EvidenceItems: []
+AC-23:
+  ControlName: Data Mining Protection
+  EvidenceItems: []
