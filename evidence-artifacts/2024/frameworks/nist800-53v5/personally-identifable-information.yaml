@@ -1,0 +1,40 @@
+PT-1:
+  ControlName: Personally Identifiable Information Processing and Transparency Policy
+    and Procedures
+  EvidenceItems: []
+PT-2:
+  ControlName: Authority to Process Personally Identifiable Information
+  EvidenceItems: []
+PT-3:
+  ControlName: Purpose Specification
+  EvidenceItems: []
+PT-4:
+  ControlName: Privacy Impact Assessments
+  EvidenceItems: []
+PT-5:
+  ControlName: Privacy Notices
+  EvidenceItems: []
+PT-6:
+  ControlName: System of Records Notices and Privacy Act Statements
+  EvidenceItems: []
+PT-7:
+  ControlName: Consent
+  EvidenceItems: []
+PT-8:
+  ControlName: Individual Access
+  EvidenceItems: []
+PT-9:
+  ControlName: Redress
+  EvidenceItems: []
+PT-10:
+  ControlName: Complaint Management
+  EvidenceItems: []
+PT-11:
+  ControlName: Privacy Reporting
+  EvidenceItems: []
+PT-12:
+  ControlName: Risk Management Framework
+  EvidenceItems: []
+PT-13:
+  ControlName: Governance and Privacy Program Management
+  EvidenceItems: []
