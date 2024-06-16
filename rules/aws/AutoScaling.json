@@ -1,0 +1,27 @@
+{
+    "standard": "Auto Scaling Resources",
+    "domains": [
+      {
+        "rule": "AutoScalingGroupELBHealthCheckRequired",
+        "controls": [
+          {
+            "nist800-53v5": "AU-12(3), AU-14a, AU-14b, CA-2(2), CA-7, CA-7b, CM-6a, CM-9b, PM-14a.1, PM-14b, PM-31, SC-6, SC-36(1)(a), SI-2a"
+            "hipaa-security": "164.312(b)"
+            "explanation": "The Elastic Load Balancer (ELB) health checks for Amazon Elastic Compute Cloud (Amazon EC2) Auto Scaling groups support maintenance of adequate capacity and availability. The load balancer periodically sends pings, attempts connections, or sends requests to test Amazon EC2 instances health in an auto-scaling group. If an instance is not reporting back, traffic is sent to a new Amazon EC2 instance."
+          }
+        ]
+      }
+      {
+        "rule": "AutoScalingLaunchConfigPublicIpDisabled",
+        "controls": [
+          {
+            "nist800-53v5": "AC-3, AC-4(21), CM-6a, SC-7(3)",
+            "hipaa-security": "164.308(a)(3)(i), 164.308(a)(3)(ii)(B), 164.308(a)(4)(ii)(A), 164.308(a)(4)(ii)(C), 164.312(a)(1), 164.312(e)(1))",
+            "explanation": "If you configure your Network Interfaces with a public IP address, then the associated resources to those Network Interfaces are reachable from the internet. EC2 resources should not be publicly accessible, as this may allow unintended access to your applications or servers."
+          }
+        ]
+      }
+    ]
+  }
+  
+  
