@@ -1,0 +1,33 @@
+IA-1:
+  ControlName: Identification and Authentication Policy and Procedures
+  EvidenceItems: []
+IA-2:
+  ControlName: Identification and Authentication (Organizational Users)
+  EvidenceItems: []
+IA-3:
+  ControlName: Device Identification and Authentication
+  EvidenceItems: []
+IA-4:
+  ControlName: Identifier Management
+  EvidenceItems: []
+IA-5:
+  ControlName: Authenticator Management
+  EvidenceItems: []
+IA-6:
+  ControlName: Authenticator Feedback
+  EvidenceItems: []
+IA-7:
+  ControlName: Cryptographic Module Authentication
+  EvidenceItems: []
+IA-8:
+  ControlName: Identification and Authentication (Non-Organizational Users)
+  EvidenceItems: []
+IA-9:
+  ControlName: Service Identification and Authentication
+  EvidenceItems: []
+IA-10:
+  ControlName: Adaptive Identification and Authentication
+  EvidenceItems: []
+IA-11:
+  ControlName: Re-authentication
+  EvidenceItems: []
