@@ -1,0 +1,44 @@
+{
+  "aws-service": "CloudWatch Resource",
+  "domain": [
+    {
+      "rule": "<Placeholder>",
+      "explanation": "<Placeholder>"
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    },
+    {
+      "rule": "<Placeholder>",
+      "explanation": "<Placeholder>"
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    },
+    {
+      "rule": "<Placeholder>",
+      "explanation": "<Placeholder>"
+      "controls": [
+        {
+          "nist800-53v5": "<Placeholder>",
+          "pci-dss-4.0.0": "<Placeholder>",
+          "iso-27001-2022": "<Placeholder>",
+          "soc-2": "<Placeholder>",
+          "hipaa-security": "<Placeholder>"
+        }
+      ]
+    }
+  ]
+}
