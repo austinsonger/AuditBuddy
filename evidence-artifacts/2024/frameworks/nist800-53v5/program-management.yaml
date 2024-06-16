@@ -1,0 +1,66 @@
+PM-1:
+  ControlName: Information Security Program Plan
+  EvidenceItems: []
+PM-3:
+  ControlName: Information Security Program Chief Information Officer
+  EvidenceItems: []
+PM-4:
+  ControlName: Plan of Action and Milestones Process
+  EvidenceItems: []
+PM-5:
+  ControlName: System Inventory
+  EvidenceItems: []
+PM-6:
+  ControlName: Information Security Measures of Performance
+  EvidenceItems: []
+PM-7:
+  ControlName: Enterprise Architecture
+  EvidenceItems: []
+PM-8:
+  ControlName: Critical Infrastructure Plan
+  EvidenceItems: []
+PM-9:
+  ControlName: Risk Management Strategy
+  EvidenceItems: []
+PM-2:
+  ControlName: Information Security Program Leadership Role
+  EvidenceItems: []
+PM-10:
+  ControlName: Authorization Process
+  EvidenceItems: []
+PM-11:
+  ControlName: Mission/Business Process Definition
+  EvidenceItems: []
+PM-12:
+  ControlName: Insider Threat Program
+  EvidenceItems: []
+PM-13:
+  ControlName: Security and Privacy Workforce
+  EvidenceItems: []
+PM-14:
+  ControlName: Testing, Training, and Monitoring
+  EvidenceItems: []
+PM-15:
+  ControlName: Contacts with Security Groups and Associations
+  EvidenceItems: []
+PM-16:
+  ControlName: Threat Awareness Program
+  EvidenceItems: []
+PM-17:
+  ControlName: Protection of Personally Identifiable Information
+  EvidenceItems: []
+PM-18:
+  ControlName: Privacy Program Plan
+  EvidenceItems: []
+PM-19:
+  ControlName: Privacy Program Leadership Role
+  EvidenceItems: []
+PM-20:
+  ControlName: Assessing and Managing Privacy Risks
+  EvidenceItems: []
+PM-21:
+  ControlName: Accounting of Disclosures
+  EvidenceItems: []
+PM-22:
+  ControlName: Personally Identifiable Information Quality Management
+  EvidenceItems: []
