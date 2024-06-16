@@ -1,0 +1,27 @@
+CA-1:
+  ControlName: Security Assessment and Authorization Policies and Procedures
+  EvidenceItems: []
+CA-2:
+  ControlName: Security Assessments
+  EvidenceItems: []
+CA-3:
+  ControlName: System Interconnections
+  EvidenceItems: []
+CA-5:
+  ControlName: Plan of Action and Milestones
+  EvidenceItems: []
+CA-6:
+  ControlName: Security Authorization
+  EvidenceItems: []
+CA-7:
+  ControlName: Continuous Monitoring
+  EvidenceItems: []
+CA-8:
+  ControlName: Penetration Testing
+  EvidenceItems: []
+CA-9:
+  ControlName: Internal System Connections
+  EvidenceItems: []
+CA-10:
+  ControlName: System Security and Privacy Engineering
+  EvidenceItems: []
