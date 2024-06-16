@@ -1,0 +1,21 @@
+RA-1:
+  ControlName: Risk Assessment Policy and Procedures
+  EvidenceItems: []
+RA-2:
+  ControlName: Security Categorization
+  EvidenceItems: []
+RA-3:
+  ControlName: Risk Assessment
+  EvidenceItems: []
+RA-5:
+  ControlName: Vulnerability Monitoring and Scanning
+  EvidenceItems: []
+RA-6:
+  ControlName: Technical Surveillance Countermeasures Survey
+  EvidenceItems: []
+RA-7:
+  ControlName: Risk Response
+  EvidenceItems: []
+RA-8:
+  ControlName: Mission and Business Focus
+  EvidenceItems: []
