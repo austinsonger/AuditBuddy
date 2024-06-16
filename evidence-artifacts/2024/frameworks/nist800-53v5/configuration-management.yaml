@@ -1,0 +1,39 @@
+CM-1:
+  ControlName: Configuration Management Policy and Procedures
+  EvidenceItems: []
+CM-2:
+  ControlName: Baseline Configuration
+  EvidenceItems: []
+CM-3:
+  ControlName: Configuration Change Control
+  EvidenceItems: []
+CM-4:
+  ControlName: Security and Privacy Impact Analysis
+  EvidenceItems: []
+CM-5:
+  ControlName: Access Restrictions for Change
+  EvidenceItems: []
+CM-6:
+  ControlName: Configuration Settings
+  EvidenceItems: []
+CM-7:
+  ControlName: Least Functionality
+  EvidenceItems: []
+CM-8:
+  ControlName: System Component Inventory
+  EvidenceItems: []
+CM-9:
+  ControlName: Configuration Management Plan
+  EvidenceItems: []
+CM-10:
+  ControlName: Software Usage Restrictions
+  EvidenceItems: []
+CM-11:
+  ControlName: User-Installed Software
+  EvidenceItems: []
+CM-12:
+  ControlName: Information Location
+  EvidenceItems: []
+CM-13:
+  ControlName: Automated Security and Privacy Testing
+  EvidenceItems: []
