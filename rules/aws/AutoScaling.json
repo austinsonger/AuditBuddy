@@ -14,7 +14,8 @@
         }
       ]
     },
-      "rule": "<Placeholder>",
+    {
+     "rule": "<Placeholder>",
       "explanation": "<Placeholder>"
       "controls": [
         {
@@ -23,8 +24,6 @@
           "iso-27001-2022": "<Placeholder>",
           "soc-2": "<Placeholder>",
           "hipaa-security": "<Placeholder>"
-        }
-      ]
     }
   ]
 }
