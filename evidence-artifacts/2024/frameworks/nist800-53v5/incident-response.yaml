@@ -1,0 +1,27 @@
+IR-1:
+  ControlName: Incident Response Policy and Procedures
+  EvidenceItems: []
+IR-2:
+  ControlName: Incident Response Training
+  EvidenceItems: []
+IR-3:
+  ControlName: Incident Response Testing
+  EvidenceItems: []
+IR-4:
+  ControlName: Incident Handling
+  EvidenceItems: []
+IR-5:
+  ControlName: Incident Monitoring
+  EvidenceItems: []
+IR-6:
+  ControlName: Incident Reporting
+  EvidenceItems: []
+IR-7:
+  ControlName: Incident Response Assistance
+  EvidenceItems: []
+IR-8:
+  ControlName: Incident Response Plan
+  EvidenceItems: []
+IR-9:
+  ControlName: Integrated Information Security Analysis Team
+  EvidenceItems: []
