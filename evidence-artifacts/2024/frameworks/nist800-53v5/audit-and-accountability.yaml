@@ -1,0 +1,48 @@
+AU-1:
+  ControlName: Audit and Accountability Policy and Procedures
+  EvidenceItems: []
+AU-2:
+  ControlName: Audit Events
+  EvidenceItems: []
+AU-3:
+  ControlName: Content of Audit Records
+  EvidenceItems: []
+AU-4:
+  ControlName: Audit Storage Capacity
+  EvidenceItems: []
+AU-5:
+  ControlName: Response to Audit Processing Failures
+  EvidenceItems: []
+AU-6:
+  ControlName: Audit Review, Analysis, and Reporting
+  EvidenceItems: []
+AU-7:
+  ControlName: Audit Reduction and Report Generation
+  EvidenceItems: []
+AU-8:
+  ControlName: Time Stamps
+  EvidenceItems: []
+AU-9:
+  ControlName: Protection of Audit Information
+  EvidenceItems: []
+AU-10:
+  ControlName: Non-repudiation
+  EvidenceItems: []
+AU-11:
+  ControlName: Audit Record Retention
+  EvidenceItems: []
+AU-12:
+  ControlName: Audit Generation
+  EvidenceItems: []
+AU-13:
+  ControlName: Monitoring for Information Disclosure
+  EvidenceItems: []
+AU-14:
+  ControlName: Session Audit
+  EvidenceItems: []
+AU-15:
+  ControlName: Alternate Audit Logging Capability
+  EvidenceItems: []
+AU-16:
+  ControlName: Cross-Organizational Auditing
+  EvidenceItems: []
