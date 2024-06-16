@@ -1,0 +1,36 @@
+SR-1:
+  ControlName: Supply Chain Risk Management Policy and Procedures
+  EvidenceItems: []
+SR-2:
+  ControlName: Supply Chain Risk Management Plan
+  EvidenceItems: []
+SR-3:
+  ControlName: Supply Chain Controls and Processes
+  EvidenceItems: []
+SR-4:
+  ControlName: Provenance
+  EvidenceItems: []
+SR-5:
+  ControlName: Acquisition Strategies, Tools, and Methods
+  EvidenceItems: []
+SR-6:
+  ControlName: Supplier Assessments and Reviews
+  EvidenceItems: []
+SR-7:
+  ControlName: Supply Chain Protection
+  EvidenceItems: []
+SR-8:
+  ControlName: Notification Agreements
+  EvidenceItems: []
+SR-9:
+  ControlName: Tamper Resistance and Detection
+  EvidenceItems: []
+SR-10:
+  ControlName: Inspection of Systems or Components
+  EvidenceItems: []
+SR-11:
+  ControlName: Component Authenticity
+  EvidenceItems: []
+SR-12:
+  ControlName: Component Disposal
+  EvidenceItems: []
