@@ -3,6 +3,11 @@
   "domain": [
     {
       "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
       "explanation": "<Placeholder>"
       "controls": [
         {
@@ -16,6 +21,11 @@
     },
     {
       "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
       "explanation": "<Placeholder>"
       "controls": [
         {
@@ -29,6 +39,11 @@
     },
     {
       "rule": "<Placeholder>",
+      "command": "<Placeholder>y",
+      "sub-command": "<Placeholder>",
+      "parameters": {
+        "<Placeholder>": "<Placeholder>"
+      },      
       "explanation": "<Placeholder>"
       "controls": [
         {
