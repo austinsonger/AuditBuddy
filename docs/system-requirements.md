@@ -1,6 +1,6 @@
 # AuditBuddy
 
-This GitHub Action automates evidence collection for compliance frameworks like SOC 2, ISO 27001, FedRAMP, and PCI DSS. It integrates with various cloud providers (AWS, Azure, GCP) and security tools (Okta, Tenable, etc.) to extract relevant data based on the chosen framework and control. The collected evidence is then formatted and committed to a designated location within the user's GitHub repository, simplifying compliance audits.
+This GitHub Action (will be on the Github marketplace) automates evidence collection for compliance frameworks like SOC 2, ISO 27001, FedRAMP, and PCI DSS. It integrates with various cloud providers (AWS, Azure, GCP) and security tools (Okta, Tenable, etc.) to extract relevant data based on the chosen framework and control. The collected evidence is then formatted and committed to a designated location within the user's GitHub repository, simplifying compliance audits.
 
 ### Framework Requirements:
 
