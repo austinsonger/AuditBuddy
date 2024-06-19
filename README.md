@@ -5,15 +5,14 @@
 ## Evidence Collection
 
 ### Tools
-
-- [X] Amazon Web Services
-- [X] Atlassian
-- [X] Okta
-- [X] Jumpcloud
-- [X] Tenable
-- [X] SentinelOne
-- [X] Splunk
-- [X] Cloudflare
+- [ ] Amazon Web Services
+- [ ] Atlassian
+- [ ] Okta
+- [ ] Jumpcloud
+- [ ] Tenable
+- [ ] SentinelOne
+- [ ] Splunk
+- [ ] Cloudflare
 
 #### Roadmap
 - [Roadmap for future tools](https://github.com/austinsonger/Evidence-and-POAM-Generation/issues?q=is%3Aopen+is%3Aissue+label%3AROADMAP)
