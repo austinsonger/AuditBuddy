@@ -1,0 +1,24 @@
+framework:
+  name: "SOC 2"
+  controls:
+    - control: "Access Control"
+      evidence_type: "Populations"
+    - control: "Configuration Management"
+      evidence_type: "Configurations"
+providers:
+  aws:
+    enabled: true
+    region: "us-east-1"
+    services:
+      - name: "IAM"
+      - name: "S3"
+  azure:
+    enabled: false
+  gcp:
+    enabled: false
+  okta:
+    enabled: false
+secrets:
+  aws_access_key: ${AWS_ACCESS_KEY}
+  aws_secret_key: ${AWS_SECRET_KEY}
+  okta_token: ${OKTA_TOKEN}

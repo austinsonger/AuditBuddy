@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  framework:
+    build: ./services/framework
+    container_name: framework_service
+    volumes:
+      - ./services/framework:/app
+    depends_on:
+      - providers
+      - utils
+    environment:
+      - CONFIG_FILE=/app/config.yaml
+
+  providers:
+    build: ./services/providers
+    container_name: providers_service
+    volumes:
+      - ./services/providers:/app
+    environment:
+      - CONFIG_FILE=/app/config.yaml
+
+  utils:
+    build: ./services/utils
+    container_name: utils_service
+    volumes:
+      - ./services/utils:/app
+    environment:
+      - CONFIG_FILE=/app/config.yaml
+
+  # Additional service configurations can be added here
