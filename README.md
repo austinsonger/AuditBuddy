@@ -2,6 +2,13 @@
 
 This GitHub Action automates evidence collection for compliance frameworks like SOC 2, ISO 27001, FedRAMP, and PCI DSS. It integrates with various cloud providers (AWS, Azure, GCP) and security tools (Okta, Tenable, etc.) to extract relevant data based on the chosen framework and control. The collected evidence is then formatted and committed to a designated location within the user's GitHub repository, simplifying compliance audits.
 
+- [Evidence Collection](#evidence-collection)
+- [Framework Requirements](#framework-requirements)
+- [Language and Configuration Files](#language-and-configuration-files)
+- [Integration with Cloud Providers and Security Tools](#integration-with-cloud-providers-and-security-tools)
+- [Evidence Collection Logic](#evidence-collection-logic)
+- [Commit and Push Evidence](#commit-and-push-evidence)
+
 ## Evidence Collection
 
 ### Tools
@@ -36,7 +43,6 @@ This GitHub Action automates evidence collection for compliance frameworks like 
 | --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
 |           |                        |                                                              |                                                       |                                                    |                            |              |
 |           |                        |                                                              |                                                       |                                                    |                            |              |
-
 
 
 
