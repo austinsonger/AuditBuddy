@@ -92,14 +92,3 @@ This GitHub Action automates evidence collection for compliance frameworks like 
     * Use Git commands within the Github Action workflow to commit the collected evidence files to a dedicated branch.
 * Push Automation
     * Configure the workflow to automatically push the committed evidence to the desired location in the repository.
-
-## Additional Considerations:
-
-* Error Handling: 
-    * Implement robust error handling mechanisms to address potential issues during data extraction or API calls.
-* Security: 
-    * Prioritize security throughout the development process. Use secure methods to store credentials and ensure proper access controls.
-* Testing: 
-    * Develop a comprehensive testing strategy to ensure the Github Action collects accurate evidence for various frameworks and controls.
-
-
