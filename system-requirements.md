@@ -46,7 +46,7 @@ This GitHub Action (will be on the Github marketplace) automates evidence collec
 ### Commit and Push Evidence
 * Version Control: 
     * Use Git commands within the Github Action workflow to commit the collected evidence files to a dedicated branch.
-* Push Automation: 
+* Push Automation
     * Configure the workflow to automatically push the committed evidence to the desired location in the repository.
 
 ### Additional Considerations:
@@ -57,7 +57,3 @@ This GitHub Action (will be on the Github marketplace) automates evidence collec
     * Prioritize security throughout the development process. Use secure methods to store credentials and ensure proper access controls.
 * Testing: 
     * Develop a comprehensive testing strategy to ensure the Github Action collects accurate evidence for various frameworks and controls.
-
-
-Can you give me recommendations of different programming setups that will work best for this project.
-    
