@@ -37,15 +37,15 @@ jobs:
       - name: Configure Corporate AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.DEVOPS_CORP_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEVOPS_CORP_AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ inputs.corp-aws-region }}
 
       - name: Configure Federal AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.DEVOPS_FEDERAL_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEVOPS_FEDERAL_AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ inputs.federal-aws-region }}
 
       - name: Checkout repository

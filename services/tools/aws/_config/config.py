@@ -17,13 +17,13 @@ current_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 environments = {
     'private-sector': EnvironmentConfig(
-        access_key=os.getenv('DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        secret_key=os.getenv('DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        access_key=os.getenv('DEVOPS_CORP_AWS_ACCESS_KEY_ID'),
+        secret_key=os.getenv('DEVOPS_CORP_AWS_SECRET_ACCESS_KEY'),
         region='us-east-1'
     ),
     'federal': EnvironmentConfig(
-        access_key=os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID'),
-        secret_key=os.getenv('DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY'),
+        access_key=os.getenv('DEVOPS_FEDERAL_AWS_ACCESS_KEY_ID'),
+        secret_key=os.getenv('DEVOPS_FEDERAL_AWS_SECRET_ACCESS_KEY'),
         region='us-east-1'
     )
 }

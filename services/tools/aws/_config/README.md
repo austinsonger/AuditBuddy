@@ -203,12 +203,12 @@ The module defines configurations for two environments:
 #### Environment Details
 
 - **private-sector**
-  - Access Key: Retrieved from `DEVOPS_CORP_AUTOMATION_AWS_ACCESS_KEY_ID` environment variable.
-  - Secret Key: Retrieved from `DEVOPS_CORP_AUTOMATION_AWS_SECRET_ACCESS_KEY` environment variable.
+  - Access Key: Retrieved from `DEVOPS_CORP_AWS_ACCESS_KEY_ID` environment variable.
+  - Secret Key: Retrieved from `DEVOPS_CORP_AWS_SECRET_ACCESS_KEY` environment variable.
   - Region: `us-east-1`
 - **federal**
-  - Access Key: Retrieved from `DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY_ID` environment variable.
-  - Secret Key: Retrieved from `DEVOPS_DOOP_AUTOMATION_AWS_SECRET_ACCESS_KEY` environment variable.
+  - Access Key: Retrieved from `DEVOPS_FEDERAL_AWS_ACCESS_KEY_ID` environment variable.
+  - Secret Key: Retrieved from `DEVOPS_FEDERAL_AWS_SECRET_ACCESS_KEY` environment variable.
   - Region: `us-east-1`
 
 
