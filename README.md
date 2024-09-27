@@ -50,12 +50,6 @@ This GitHub Action automates evidence collection for compliance frameworks like 
 * Data Formatting: 
     * Format the extracted data according to your defined structure (Populations, Configurations, Rules, Samples).
 
-## Commit and Push Evidence
-* Version Control: 
-    * Use Git commands within the Github Action workflow to commit the collected evidence files to a dedicated branch.
-* Push Automation
-    * Configure the workflow to automatically push the committed evidence to the desired location in the repository.
-
 ## Evidence Collection
 
 ### Tools
@@ -91,3 +85,9 @@ This GitHub Action automates evidence collection for compliance frameworks like 
 |           |                        |                                                              |                                                       |                                                    |                            |              |
 |           |                        |                                                              |                                                       |                                                    |                            |              |
 
+
+## Commit and Push Evidence
+* Version Control: 
+    * Use Git commands within the Github Action workflow to commit the collected evidence files to a dedicated branch.
+* Push Automation
+    * Configure the workflow to automatically push the committed evidence to the desired location in the repository.
