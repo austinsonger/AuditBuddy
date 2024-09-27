@@ -9,42 +9,6 @@ This GitHub Action automates evidence collection for compliance frameworks like 
 - [Evidence Collection Logic](#evidence-collection-logic)
 - [Commit and Push Evidence](#commit-and-push-evidence)
 
-## Evidence Collection
-
-### Tools
-- [ ] Amazon Web Services
-- [ ] Atlassian
-- [ ] Okta
-- [ ] Jumpcloud
-- [ ] Tenable
-- [ ] SentinelOne
-- [ ] Splunk
-- [ ] Cloudflare
-
-#### Roadmap
-- [Roadmap for future tools](https://github.com/austinsonger/Evidence-and-POAM-Generation/issues?q=is%3Aopen+is%3Aissue+label%3AROADMAP)
-
-
-### Evidence Mapping
-
-- [ ] - Private Sector
-- [ ] - Federal
-
-#### Federal
-
-| Frequency | Auditor  Evidence ID # | Evidence                                                     | Github Action                                         | Evidence Output                                    | FedRAMP Mapping               | NIST Mapping |
-| --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
-|           |                        |                                                              |                                                       |                                                    |                            |              |
-|           |                        |                                                              |                                                       |                                                    |                            |              |
-
-#### Private Sector
-
-| Frequency | Auditor  Evidence ID # | Evidence                                                     | Github Action                                         | Evidence Output                                    | SOC2 Mapping               | NIST Mapping |
-| --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
-|           |                        |                                                              |                                                       |                                                    |                            |              |
-|           |                        |                                                              |                                                       |                                                    |                            |              |
-
-
 
 ## Framework Requirements:
 
@@ -92,3 +56,39 @@ This GitHub Action automates evidence collection for compliance frameworks like 
     * Use Git commands within the Github Action workflow to commit the collected evidence files to a dedicated branch.
 * Push Automation
     * Configure the workflow to automatically push the committed evidence to the desired location in the repository.
+
+## Evidence Collection
+
+### Tools
+- [ ] Amazon Web Services
+- [ ] Atlassian
+- [ ] Okta
+- [ ] Jumpcloud
+- [ ] Tenable
+- [ ] SentinelOne
+- [ ] Splunk
+- [ ] Cloudflare
+
+#### Roadmap
+- [Roadmap for future tools](https://github.com/austinsonger/Evidence-and-POAM-Generation/issues?q=is%3Aopen+is%3Aissue+label%3AROADMAP)
+
+
+### Evidence Mapping
+
+- [ ] - Private Sector
+- [ ] - Federal
+
+#### Federal
+
+| Frequency | Auditor  Evidence ID # | Evidence                                                     | Github Action                                         | Evidence Output                                    | FedRAMP Mapping               | NIST Mapping |
+| --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
+|           |                        |                                                              |                                                       |                                                    |                            |              |
+|           |                        |                                                              |                                                       |                                                    |                            |              |
+
+#### Private Sector
+
+| Frequency | Auditor  Evidence ID # | Evidence                                                     | Github Action                                         | Evidence Output                                    | SOC2 Mapping               | NIST Mapping |
+| --------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------- | :------------------------- | ------------ |
+|           |                        |                                                              |                                                       |                                                    |                            |              |
+|           |                        |                                                              |                                                       |                                                    |                            |              |
+
