@@ -11,8 +11,10 @@ jobs:
         uses: .github/variables-commercial.yml@main
         
       - name: Run Jira ticket collection script
-#        env:
-#          JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }} | JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }} | API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        env:
+          JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }}
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}  
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
         run: |
           python src/collection/jira/completed-jira-tickets.py
 
