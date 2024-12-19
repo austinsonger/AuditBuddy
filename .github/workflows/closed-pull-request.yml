@@ -24,8 +24,8 @@ jobs:
       # Fetch merged PRs using gh CLI
       - name: Fetch Merged Pull Requests
         env:
-          REPO_OWNER: CirrusMD
-          REPO_NAME: cirrusmd-web-app
+          REPO_OWNER: <Company>
+          REPO_NAME: <Company>-web-app
         run: |
           gh api repos/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}/pulls \
             --method GET \

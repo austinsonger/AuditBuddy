@@ -1,0 +1,31 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:1a5c6002-47f9-41cb-8fec-e2c36d8865cf",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-10-18T15:14:58Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "Amazon Web Services, Inc. (AWS)",
+          "name": "inspector-sbomgen",
+          "version": "1.5.0",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "7d7c0a4d619afe7f40bed075047300af9329aa7c82a089bce4fc5576db2e44c3"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "comp-1",
+      "type": "file",
+      "name": "/github/workspace"
+    }
+  },
+  "components": null
+}

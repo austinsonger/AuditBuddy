@@ -1,0 +1,3 @@
+"#artifact_name:./","artifact_type:directory","artifact_hash:null","build_id:null"
+"#critical_vulnerabilities:0","high_vulnerabilities:0","medium_vulnerabilities:0","low_vulnerabilities:0","other_vulnerabilities:0"
+"ID","Severity","Source","CVSS","Installed Package","Fixed Package","Path","EPSS","Exploit Available","Exploit Last Seen","CWEs"

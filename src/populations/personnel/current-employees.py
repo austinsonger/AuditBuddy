@@ -7,7 +7,7 @@ from datetime import datetime
 
 API_KEY = os.getenv('TRINET_API_KEY')
 API_SECRET = os.getenv('TRINET_API_SECRET')
-COMPANY_ID = "CJ6"
+COMPANY_ID = "<PLACEHOLDER>"
 TOKEN_URL = "https://api.trinet.com/oauth/accesstoken?grant_type=client_credentials"
 EMPLOYEE_LIST_URL_TEMPLATE = "https://api.trinet.com/v1/company/{companyId}/employees"
 BASE_DIR = "evidence-artifacts/personnel"  # Base directory for storing the employee list
