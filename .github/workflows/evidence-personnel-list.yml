@@ -1,0 +1,29 @@
+name: Run TriNet Employee Script
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+jobs:
+  run-trinet-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      CI_COMMIT_MESSAGE: 'New Personnel List'      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Environment Variables
+      uses: .github/variables-commercial.yml@main
+      continue-on-error: false        
+    - name: Run TriNet Script
+      run: |
+        python src/collection/personnel/current-employees.py 
+    
+    - name: Upload Evidence Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: employee-list-artifacts
+        path: evidence-artifacts/personnel/employee_list.json
+
+    - name: Commit & Push
+      uses: ./.github/workflows/actions/commit-and-push.yml

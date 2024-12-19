@@ -1,0 +1,29 @@
+name: Running Okta Evidence
+on:
+  workflow_dispatch:
+jobs:
+  run-okta:
+    runs-on: ubuntu-latest
+    env:
+      OKTA_DOMAIN: ${{ secrets.OKTA_DOMAIN }}
+      API_TOKEN: ${{ secrets.OKTA_API_TOKEN }}
+      CI_COMMIT_MESSAGE: Okta Evidence      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Environment Variables
+      uses: .github/variables-commercial.yml@main
+      
+    - name: Run check-authentication-settings
+      run: python src/evidence-collection/okta/check_authentication_settings.py
+    - name: Run check-deactivated-users
+      run: python src/evidence-collection/okta/check_deactivated_users.py
+    - name: Run check-mfa-enrollments
+      run: python src/evidence-collection/okta/check_mfa_enrollments.py
+    - name: Run check-password-policies
+      run: python src/evidence-collection/okta/check_password_policies.py
+    - name: Run check-users-and-groups
+      run: python src/evidence-collection/okta/check_users_and_groups.py
+
+    - name: Commit & Push
+      uses: ./.github/workflows/actions/commit-and-push.yml

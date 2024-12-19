@@ -1,0 +1,45 @@
+name: Fetch Merged PRs and Save to JSON
+
+on:
+  workflow_dispatch: # Allows manual trigger
+  #schedule:
+  #  - cron: '0 0 * * *' # Runs daily at midnight (UTC)
+
+jobs:
+  fetch-merged-prs:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Authenticate with GitHub CLI
+      - name: Authenticate with GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      # Fetch merged PRs using gh CLI
+      - name: Fetch Merged Pull Requests
+        env:
+          REPO_OWNER: CirrusMD
+          REPO_NAME: cirrusmd-web-app
+        run: |
+          gh api repos/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}/pulls \
+            --method GET \
+            --jq '.[] | select(.state == "closed" and .merged_at != null and (.merged_at | fromdateiso8601) >= (now - 30*86400)) | {number, title, merged_at, user: .user.login, merged_by: .merged_by.login, url: .html_url, additions, deletions, commits, changed_files}' \
+            > merged_prs.json
+
+      # Commit and push the output JSON file
+      - name: Commit and Push JSON
+        env:
+          COMMITTER_NAME: GitHub Action
+          COMMITTER_EMAIL: actions@github.com
+        run: |
+          git config --global user.name "${{ env.COMMITTER_NAME }}"
+          git config --global user.email "${{ env.COMMITTER_EMAIL }}"
+          git add merged_prs.json
+          git commit -m "Add merged PRs report for the last 30 days"
+          git push origin HEAD

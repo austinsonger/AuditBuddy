@@ -1,0 +1,44 @@
+name:  Federal Tenable
+on:
+  workflow_dispatch:
+jobs:
+  fetch_and_save_scans:
+    runs-on: ubuntu-latest
+    permissions:                
+     contents: write          
+     pull-requests: write      
+    env: 
+      CI_COMMIT_MESSAGE: New Tenable Scan Results
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Environment Variables
+      uses: .github/variables-federal.yml@main
+      
+    - name: Create Tenable evidence artifacts directory
+      run: mkdir -p evidence-artifacts/federal/tenable   
+
+    - name: Debug API Key
+      run: echo "Tenable Access Key:${{ secrets.FEDERAL_TENABLE_ACCESS_KEY }}"
+    - name: Debug environment variables
+      run: printenv | grep TIO
+    - name: Debug API Keys
+      run: |
+       echo "Tenable Access Key: ${{ secrets.FEDERAL_TENABLE_ACCESS_KEY }}" | echo "Tenable Secret Key: ${{ secrets.FEDERAL_TENABLE_SECRET_KEY }}"
+
+    - name: Run Tenable Scan Script
+      env:
+        TIO_ACCESS_KEY: ${{ secrets.FEDERAL_TENABLE_ACCESS_KEY }}
+        TIO_SECRET_KEY: ${{ secrets.FEDERAL_TENABLE_SECRET_KEY }}
+      working-directory: src/poam
+      run: python federal-tenable.py --download-path src/evidence-artifacts/federal/tenable
+
+    - name: Commit & Push
+      uses: ./.github/workflows/actions/commit-and-push.yml
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: ${{ env.CI_COMMIT_MESSAGE }}

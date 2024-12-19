@@ -1,0 +1,19 @@
+name:  Run Commercial Tenable Scan
+on:
+  workflow_dispatch:
+jobs:
+  fetch_and_save_scans:
+    runs-on: ubuntu-latest
+    permissions:                
+     contents: write          
+     pull-requests: write      
+    env: 
+      CI_COMMIT_MESSAGE: Running a Tenable Scan
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Environment Variables
+      uses: .github/environment-variables.yml@main
+          

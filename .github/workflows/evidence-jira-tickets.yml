@@ -1,0 +1,25 @@
+name: Fetch Completed Jira Tickets Monthly
+on:
+ workflow_dispatch:
+jobs:
+  fetch_completed_tickets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Environment Variables
+        uses: .github/variables-commercial.yml@main
+        
+      - name: Run Jira ticket collection script
+#        env:
+#          JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }} | JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }} | API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: |
+          python src/collection/jira/completed-jira-tickets.py
+
+      - name: Upload ticket JSON files
+        uses: actions/upload-artifact@v3
+        with:
+          name: completed-tickets
+          path: completed_tickets/**/*.json    
+      - name: Commit & Push
+        uses: ./.github/workflows/actions/commit-and-push.yml

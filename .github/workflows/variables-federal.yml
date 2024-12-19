@@ -1,0 +1,38 @@
+name: Federal Environment Variables Setup
+on: 
+  workflow_dispatch:
+jobs:
+  federal:
+    name: Federal Environment Setup
+    runs-on: ubuntu-latest
+    env:
+      CI_COMMIT_AUTHOR: Continuous Integration
+    steps:
+      - name: Checkout code from repository
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials for federal
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.DEVOPS_DOOP_AUTOMATION_AWS_SECRET }}
+          aws-region: us-east-1
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use a specific Python version
+
+      - name: Prepare Environment
+        id: prep
+        run: /bin/bash .github/prep.sh
+
+      - name: Set environment variables for additional secrets
+        env:
+          FEDERAL_TIO_ACCESS_KEY: ${{ secrets.FEDERAL_TENABLE_ACCESS_KEY }}
+          FEDERAL_TIO_SECRET_KEY: ${{ secrets.FEDERAL_TENABLE_SECRET_KEY }}
+
+      - name: Git Global Config
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "actions@github.com"
